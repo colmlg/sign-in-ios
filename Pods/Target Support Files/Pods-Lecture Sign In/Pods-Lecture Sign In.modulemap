@@ -1,0 +1,6 @@
+framework module Pods_Lecture_Sign_In {
+  umbrella header "Pods-Lecture Sign In-umbrella.h"
+
+  export *
+  module * { export * }
+}
