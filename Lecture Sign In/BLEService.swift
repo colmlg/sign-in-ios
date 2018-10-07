@@ -10,7 +10,7 @@ import Foundation
 import CoreBluetooth
 
 class BLEService: NSObject {
-    
+
     static let shared = BLEService()
     private override init() {
         super.init()
@@ -18,5 +18,5 @@ class BLEService: NSObject {
 }
 
 extension BLEService: CBPeripheralDelegate {
-    
+
 }
