@@ -1,11 +1,3 @@
-//
-//  AppDelegate.swift
-//  Lecture Sign In
-//
-//  Created by Colm Le Gear on 07/10/2018.
-//  Copyright © 2018 Colm Le Gear. All rights reserved.
-//
-
 import UIKit
 
 @UIApplicationMain
