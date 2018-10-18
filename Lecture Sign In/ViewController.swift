@@ -1,18 +1,20 @@
 import UIKit
 import CoreLocation
+import RxSwift
 
 class ViewController: UIViewController {
     
     @IBOutlet weak var roomNumberLabel: UILabel!
     @IBOutlet weak var imageView: UIImageView!
-    
-    let beaconManager = BeaconManager()
+    private let disposeBag = DisposeBag()
+    private let beaconManager = BeaconManager()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         beaconManager.delegate = self
         beaconManager.startMonitoring()
     }
+    
     @IBAction func openCameraPressed(_ sender: Any) {
         if UIImagePickerController.isSourceTypeAvailable(.camera) {
             let imagePicker = UIImagePickerController()
