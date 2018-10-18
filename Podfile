@@ -9,7 +9,9 @@ target 'Lecture Sign In' do
     pod 'Alamofire', '~> 4.7'
     pod 'RealmSwift'
     pod 'SwiftLint'
-
+    pod 'RxSwift'
+    pod 'KeychainSwift'
+    
   target 'Lecture Sign InTests' do
     inherit! :search_paths
     # Pods for testing
