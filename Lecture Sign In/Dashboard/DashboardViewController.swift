@@ -1,16 +1,22 @@
 import UIKit
 import CoreLocation
 import RxSwift
+import RxCocoa
 
-class ViewController: UIViewController {
+class DashboardViewController: UIViewController {
     
     @IBOutlet weak var roomNumberLabel: UILabel!
     @IBOutlet weak var imageView: UIImageView!
+    
     private let disposeBag = DisposeBag()
     private let beaconManager = BeaconManager()
+    private let viewModel = DashboardViewModel()
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        viewModel.faceImage.asObservable().bind(to: imageView.rx.image).disposed(by: disposeBag)
+        
+        viewModel.login()
         beaconManager.delegate = self
         beaconManager.startMonitoring()
     }
@@ -27,18 +33,18 @@ class ViewController: UIViewController {
     }
 }
 
-extension ViewController: UIImagePickerControllerDelegate, UINavigationControllerDelegate {
+extension DashboardViewController: UIImagePickerControllerDelegate, UINavigationControllerDelegate {
     
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String: Any]) {
         guard let image = info[UIImagePickerControllerOriginalImage] as? UIImage else {
             return
         }
-        imageView.image = image
+        viewModel.faceImage.value = image
         dismiss(animated: true, completion: nil)
     }
 }
 
-extension ViewController: BeaconManagerDelegate {
+extension DashboardViewController: BeaconManagerDelegate {
     func closestBeaconDidChange(beacon: CLBeacon?) {
         guard let beacon = beacon else {
             roomNumberLabel.text = "Room Number: "

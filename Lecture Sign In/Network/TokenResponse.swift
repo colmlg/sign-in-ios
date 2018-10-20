@@ -1,3 +1,3 @@
 class TokenResponse: Codable {
-    var token: String?
+    var token: String
 }
