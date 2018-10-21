@@ -40,6 +40,7 @@ extension DashboardViewController: UIImagePickerControllerDelegate, UINavigation
             return
         }
         viewModel.faceImage.value = image
+        viewModel.upload(image: image)
         dismiss(animated: true, completion: nil)
     }
 }

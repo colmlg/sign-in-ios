@@ -18,7 +18,7 @@ struct ErrorResponse: Error {
 }
 
 class BaseAPIService {
-    private let baseUrl = "http://localhost:3000"
+    private let baseUrl = "http://dc9a03f8.ngrok.io"
     
     func post<T: Codable>(model: Codable, endPoint: String) -> Observable<T> {
         guard let url = URL(string: self.baseUrl + endPoint) else {

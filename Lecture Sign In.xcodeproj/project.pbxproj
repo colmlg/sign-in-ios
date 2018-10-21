@@ -11,6 +11,10 @@
 		846732CC217B979E00C68C0E /* LoginService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 846732CB217B979E00C68C0E /* LoginService.swift */; };
 		846732CE217B97C700C68C0E /* LoginRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 846732CD217B97C700C68C0E /* LoginRequest.swift */; };
 		846732D0217B9A3F00C68C0E /* DashboardViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 846732CF217B9A3F00C68C0E /* DashboardViewModel.swift */; };
+		D21747F3217D1F2F000FD7B8 /* UserService.swift in Sources */ = {isa = PBXBuildFile; fileRef = D21747F2217D1F2F000FD7B8 /* UserService.swift */; };
+		D21747F5217D1F4E000FD7B8 /* ImageRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = D21747F4217D1F4E000FD7B8 /* ImageRequest.swift */; };
+		D21747F7217D1F81000FD7B8 /* EmptyResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = D21747F6217D1F81000FD7B8 /* EmptyResponse.swift */; };
+		D21747F9217D249F000FD7B8 /* UIImageExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = D21747F8217D249F000FD7B8 /* UIImageExtensions.swift */; };
 		D23A255C216E93DE00ACF98D /* Repository.swift in Sources */ = {isa = PBXBuildFile; fileRef = D23A255B216E93DE00ACF98D /* Repository.swift */; };
 		D25271D4216FB4B600DDC167 /* BeaconManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D25271D3216FB4B600DDC167 /* BeaconManager.swift */; };
 		D25271D6216FB85700DDC167 /* BaseAPIService.swift in Sources */ = {isa = PBXBuildFile; fileRef = D25271D5216FB85700DDC167 /* BaseAPIService.swift */; };
@@ -57,6 +61,10 @@
 		846732CD217B97C700C68C0E /* LoginRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginRequest.swift; sourceTree = "<group>"; };
 		846732CF217B9A3F00C68C0E /* DashboardViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardViewModel.swift; sourceTree = "<group>"; };
 		C6E356D92B7DA7CEFDA751DA /* Pods_Lecture_Sign_InUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Lecture_Sign_InUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		D21747F2217D1F2F000FD7B8 /* UserService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserService.swift; sourceTree = "<group>"; };
+		D21747F4217D1F4E000FD7B8 /* ImageRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageRequest.swift; sourceTree = "<group>"; };
+		D21747F6217D1F81000FD7B8 /* EmptyResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmptyResponse.swift; sourceTree = "<group>"; };
+		D21747F8217D249F000FD7B8 /* UIImageExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIImageExtensions.swift; sourceTree = "<group>"; };
 		D23A255B216E93DE00ACF98D /* Repository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Repository.swift; sourceTree = "<group>"; };
 		D25271D3216FB4B600DDC167 /* BeaconManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BeaconManager.swift; sourceTree = "<group>"; };
 		D25271D5216FB85700DDC167 /* BaseAPIService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseAPIService.swift; sourceTree = "<group>"; };
@@ -159,6 +167,16 @@
 			path = Dashboard;
 			sourceTree = "<group>";
 		};
+		D21747F1217D1F1C000FD7B8 /* User */ = {
+			isa = PBXGroup;
+			children = (
+				D21747F2217D1F2F000FD7B8 /* UserService.swift */,
+				D21747F4217D1F4E000FD7B8 /* ImageRequest.swift */,
+			);
+			name = User;
+			path = "New Group";
+			sourceTree = "<group>";
+		};
 		D23A2558216E933B00ACF98D /* Data Layer */ = {
 			isa = PBXGroup;
 			children = (
@@ -198,6 +216,7 @@
 				D2AFD4272178EDA000B2B917 /* Network */,
 				D23A2558216E933B00ACF98D /* Data Layer */,
 				D25271D3216FB4B600DDC167 /* BeaconManager.swift */,
+				D21747F8217D249F000FD7B8 /* UIImageExtensions.swift */,
 				D274FE33216A83C10096D02D /* Main.storyboard */,
 				D274FE36216A83C20096D02D /* Assets.xcassets */,
 				D274FE38216A83C20096D02D /* LaunchScreen.storyboard */,
@@ -227,10 +246,12 @@
 		D2AFD4272178EDA000B2B917 /* Network */ = {
 			isa = PBXGroup;
 			children = (
+				D21747F1217D1F1C000FD7B8 /* User */,
 				846732CA217B978400C68C0E /* Login */,
 				846732C9217B976400C68C0E /* Register */,
 				D2AFD4232178E8D800B2B917 /* TokenResponse.swift */,
 				D25271D5216FB85700DDC167 /* BaseAPIService.swift */,
+				D21747F6217D1F81000FD7B8 /* EmptyResponse.swift */,
 			);
 			path = Network;
 			sourceTree = "<group>";
@@ -478,7 +499,11 @@
 				D274FE30216A83C10096D02D /* AppDelegate.swift in Sources */,
 				846732CC217B979E00C68C0E /* LoginService.swift in Sources */,
 				D2AFD4242178E8D800B2B917 /* TokenResponse.swift in Sources */,
+				D21747F7217D1F81000FD7B8 /* EmptyResponse.swift in Sources */,
+				D21747F5217D1F4E000FD7B8 /* ImageRequest.swift in Sources */,
+				D21747F3217D1F2F000FD7B8 /* UserService.swift in Sources */,
 				D2AFD4262178E90100B2B917 /* RegisterRequest.swift in Sources */,
+				D21747F9217D249F000FD7B8 /* UIImageExtensions.swift in Sources */,
 				D2AFD4292178EDD900B2B917 /* RegisterService.swift in Sources */,
 				D23A255C216E93DE00ACF98D /* Repository.swift in Sources */,
 			);
