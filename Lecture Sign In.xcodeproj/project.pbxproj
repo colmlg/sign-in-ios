@@ -154,6 +154,7 @@
 			children = (
 				846732CB217B979E00C68C0E /* LoginService.swift */,
 				846732CD217B97C700C68C0E /* LoginRequest.swift */,
+				D2AFD4232178E8D800B2B917 /* TokenResponse.swift */,
 			);
 			path = Login;
 			sourceTree = "<group>";
@@ -249,7 +250,6 @@
 				D21747F1217D1F1C000FD7B8 /* User */,
 				846732CA217B978400C68C0E /* Login */,
 				846732C9217B976400C68C0E /* Register */,
-				D2AFD4232178E8D800B2B917 /* TokenResponse.swift */,
 				D25271D5216FB85700DDC167 /* BaseAPIService.swift */,
 				D21747F6217D1F81000FD7B8 /* EmptyResponse.swift */,
 			);
@@ -447,6 +447,7 @@
 				"${SRCROOT}/Pods/Target Support Files/Pods-Lecture Sign In/Pods-Lecture Sign In-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
 				"${BUILT_PRODUCTS_DIR}/KeychainSwift/KeychainSwift.framework",
+				"${BUILT_PRODUCTS_DIR}/PKHUD/PKHUD.framework",
 				"${BUILT_PRODUCTS_DIR}/Realm/Realm.framework",
 				"${BUILT_PRODUCTS_DIR}/RealmSwift/RealmSwift.framework",
 				"${BUILT_PRODUCTS_DIR}/RxCocoa/RxCocoa.framework",
@@ -456,6 +457,7 @@
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/KeychainSwift.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/PKHUD.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Realm.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RealmSwift.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxCocoa.framework",

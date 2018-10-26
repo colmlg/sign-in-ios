@@ -1,5 +1,6 @@
 import RxSwift
 import KeychainSwift
+import PKHUD
 
 class DashboardViewModel {
     
@@ -17,18 +18,21 @@ class DashboardViewModel {
     }
     
     func upload(image: UIImage) {
-        let resizedImage = image.resizeImage(400.0, opaque: true)
-        guard let imageData = UIImageJPEGRepresentation(resizedImage, 0.5) else {
+        let resizedImage = image.resizeImage(700.0, opaque: true)
+        guard let imageData = UIImagePNGRepresentation(resizedImage) else {
             return
         }
         
         let request = ImageRequest(image: imageData)
+        HUD.show(.progress)
         UserService().setImage(model: request).subscribe(onNext: { _ in
+            HUD.flash(.success)
             print("Success!")
         }, onError: handleError).disposed(by: disposeBag)
     }
     
     func handleError(_ error: Error) {
+        HUD.flash(.error)
         print(error.localizedDescription)
     }
 }

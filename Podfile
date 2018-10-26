@@ -12,6 +12,7 @@ target 'Lecture Sign In' do
     pod 'RxSwift',    '~> 4.0'
     pod 'RxCocoa',    '~> 4.0'
     pod 'KeychainSwift'
+    pod 'PKHUD'
     
   target 'Lecture Sign InTests' do
     inherit! :search_paths
