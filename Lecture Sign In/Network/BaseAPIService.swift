@@ -9,7 +9,7 @@ extension Encodable {
     }
 }
 
-struct ErrorResponse: Error {
+struct ErrorResponse: Error, Codable {
     let error: String
     
     var localizedDescription: String {
@@ -18,7 +18,7 @@ struct ErrorResponse: Error {
 }
 
 class BaseAPIService {
-    private let baseUrl = "http://2adb7e1d.ngrok.io"
+    private let baseUrl = "http://192.168.1.9:3000"
     
     func post<T: Codable>(model: Codable, endPoint: String) -> Observable<T> {
         guard let url = URL(string: self.baseUrl + endPoint) else {
@@ -33,7 +33,8 @@ class BaseAPIService {
             Alamofire.request(request).response { (response) in
                 guard let data = response.data,
                     let responseModel = try? JSONDecoder().decode(T.self, from: data) else {
-                        return observer.onError(ErrorResponse(error: "Inavlid Response"))
+                        let errorResponse = try? JSONDecoder().decode(ErrorResponse.self, from: response.data!)
+                        return observer.onError(errorResponse ?? ErrorResponse(error: "Inavlid Response"))
                 }
                 
                 observer.onNext(responseModel)

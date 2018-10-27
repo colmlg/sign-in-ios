@@ -17,9 +17,9 @@ class DashboardViewModel {
         }, onError: handleError).disposed(by: disposeBag)
     }
     
-    func upload(image: UIImage) {
-        let resizedImage = image.resizeImage(700.0, opaque: true)
-        guard let imageData = UIImagePNGRepresentation(resizedImage) else {
+    func setImage(image: UIImage) {
+        let resizedImage = image.resizeImage(500.0, opaque: true)
+        guard let imageData = UIImageJPEGRepresentation(resizedImage, 0.5) else {
             return
         }
         
@@ -31,8 +31,25 @@ class DashboardViewModel {
         }, onError: handleError).disposed(by: disposeBag)
     }
     
+    func compareFaces(image: UIImage, completion: @escaping ((Bool) -> Void)) {
+        let resizedImage = image.resizeImage(500.0, opaque: true)
+        guard let imageData = UIImageJPEGRepresentation(resizedImage, 0.5) else {
+            return
+        }
+        
+        let request = ImageRequest(image: imageData)
+        HUD.show(.progress)
+        UserService().compareFaces(model: request).subscribe(onNext: { response in
+            HUD.flash(.success)
+            print(response.isIdentical)
+            print(response.confidence)
+            completion(response.isIdentical)
+        }, onError: handleError).disposed(by: disposeBag)
+    }
+    
     func handleError(_ error: Error) {
         HUD.flash(.error)
-        print(error.localizedDescription)
+        let errorResponse = error as? ErrorResponse
+        print(errorResponse?.error)
     }
 }

@@ -7,6 +7,7 @@ class DashboardViewController: UIViewController {
     
     @IBOutlet weak var roomNumberLabel: UILabel!
     @IBOutlet weak var imageView: UIImageView!
+    @IBOutlet weak var refernceSwitch: UISwitch!
     
     private let disposeBag = DisposeBag()
     private let beaconManager = BeaconManager()
@@ -31,6 +32,13 @@ class DashboardViewController: UIViewController {
             present(imagePicker, animated: true, completion: nil)
         }
     }
+    
+    func showAlertDialog(text: String) {
+        let controller = UIAlertController(title: "Faces Compared", message: text, preferredStyle: .alert)
+        let okayButton = UIAlertAction(title: "OK", style: .default, handler: nil)
+        controller.addAction(okayButton)
+        show(controller, sender: nil)
+    }
 }
 
 extension DashboardViewController: UIImagePickerControllerDelegate, UINavigationControllerDelegate {
@@ -40,7 +48,15 @@ extension DashboardViewController: UIImagePickerControllerDelegate, UINavigation
             return
         }
         viewModel.faceImage.value = image
-        viewModel.upload(image: image)
+        
+        if refernceSwitch.isOn {
+            viewModel.setImage(image: image)
+        } else {
+            viewModel.compareFaces(image: image, completion: { success in
+                self.showAlertDialog(text: success ? "Faces are Identical!" : "Not the same face!")
+            })
+        }
+        
         dismiss(animated: true, completion: nil)
     }
 }

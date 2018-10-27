@@ -27,8 +27,7 @@ extension UIImage {
             let renderFormat = UIGraphicsImageRendererFormat.default()
             renderFormat.opaque = opaque
             let renderer = UIGraphicsImageRenderer(size: CGSize(width: width, height: height), format: renderFormat)
-            newImage = renderer.image {
-                (_) in
+            newImage = renderer.image {  (_) in
                 self.draw(in: CGRect(x: 0, y: 0, width: width, height: height))
             }
         } else {
