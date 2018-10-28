@@ -48,7 +48,7 @@ extension DashboardViewController: UIImagePickerControllerDelegate, UINavigation
             return
         }
         viewModel.faceImage.value = image
-        
+        dismiss(animated: true, completion: nil)
         if refernceSwitch.isOn {
             viewModel.setImage(image: image)
         } else {
@@ -57,7 +57,6 @@ extension DashboardViewController: UIImagePickerControllerDelegate, UINavigation
             })
         }
         
-        dismiss(animated: true, completion: nil)
     }
 }
 
