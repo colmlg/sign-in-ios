@@ -3,22 +3,8 @@ import Alamofire
 import RxSwift
 import KeychainSwift
 
-extension Encodable {
-    func toData() -> Data? {
-        return try? JSONEncoder().encode(self)
-    }
-}
-
-struct ErrorResponse: Error, Codable {
-    let error: String
-    
-    var localizedDescription: String {
-        return error
-    }
-}
-
 class BaseAPIService {
-    private let baseUrl = "http://192.168.1.9:3000"
+    private let baseUrl = "http://sign-in-backend.northeurope.cloudapp.azure.com:3000"
     
     func post<T: Codable>(model: Codable, endPoint: String) -> Observable<T> {
         guard let url = URL(string: self.baseUrl + endPoint) else {
@@ -31,6 +17,11 @@ class BaseAPIService {
     private func sendRequest<T: Codable>(request: URLRequest) -> Observable<T> {
         return Observable.create { observer in
             Alamofire.request(request).response { (response) in
+                
+                if let status = response.response?.statusCode, status == 403 {
+                    
+                }
+                
                 guard let data = response.data,
                     let responseModel = try? JSONDecoder().decode(T.self, from: data) else {
                         let errorResponse = try? JSONDecoder().decode(ErrorResponse.self, from: response.data!)

@@ -48,14 +48,15 @@ extension DashboardViewController: UIImagePickerControllerDelegate, UINavigation
             return
         }
         viewModel.faceImage.value = image
-        dismiss(animated: true, completion: nil)
-        if refernceSwitch.isOn {
-            viewModel.setImage(image: image)
-        } else {
-            viewModel.compareFaces(image: image, completion: { success in
-                self.showAlertDialog(text: success ? "Faces are Identical!" : "Not the same face!")
-            })
-        }
+        dismiss(animated: true, completion: {
+            if self.refernceSwitch.isOn {
+                self.viewModel.setImage(image: image)
+            } else {
+                self.viewModel.compareFaces(image: image, completion: { success in
+                    self.showAlertDialog(text: success ? "Faces are Identical!" : "Not the same face!")
+                })
+            }
+        })
         
     }
 }
