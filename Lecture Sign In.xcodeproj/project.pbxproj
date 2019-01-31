@@ -19,6 +19,8 @@
 		D23A255C216E93DE00ACF98D /* Repository.swift in Sources */ = {isa = PBXBuildFile; fileRef = D23A255B216E93DE00ACF98D /* Repository.swift */; };
 		D25271D4216FB4B600DDC167 /* BeaconManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D25271D3216FB4B600DDC167 /* BeaconManager.swift */; };
 		D25271D6216FB85700DDC167 /* BaseAPIService.swift in Sources */ = {isa = PBXBuildFile; fileRef = D25271D5216FB85700DDC167 /* BaseAPIService.swift */; };
+		D25C879621F16BF00088A4F0 /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D25C879521F16BF00088A4F0 /* RegisterViewController.swift */; };
+		D25C879821F261D10088A4F0 /* RegisterViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D25C879721F261D10088A4F0 /* RegisterViewModel.swift */; };
 		D274FE30216A83C10096D02D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D274FE2F216A83C10096D02D /* AppDelegate.swift */; };
 		D274FE32216A83C10096D02D /* DashboardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D274FE31216A83C10096D02D /* DashboardViewController.swift */; };
 		D274FE35216A83C10096D02D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D274FE33216A83C10096D02D /* Main.storyboard */; };
@@ -74,6 +76,8 @@
 		D23A255B216E93DE00ACF98D /* Repository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Repository.swift; sourceTree = "<group>"; };
 		D25271D3216FB4B600DDC167 /* BeaconManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BeaconManager.swift; sourceTree = "<group>"; };
 		D25271D5216FB85700DDC167 /* BaseAPIService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseAPIService.swift; sourceTree = "<group>"; };
+		D25C879521F16BF00088A4F0 /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
+		D25C879721F261D10088A4F0 /* RegisterViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewModel.swift; sourceTree = "<group>"; };
 		D274FE2C216A83C10096D02D /* Lecture Sign In.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Lecture Sign In.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D274FE2F216A83C10096D02D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D274FE31216A83C10096D02D /* DashboardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardViewController.swift; sourceTree = "<group>"; };
@@ -197,6 +201,15 @@
 			path = "Data Layer";
 			sourceTree = "<group>";
 		};
+		D25C879121F16AD00088A4F0 /* Register */ = {
+			isa = PBXGroup;
+			children = (
+				D25C879521F16BF00088A4F0 /* RegisterViewController.swift */,
+				D25C879721F261D10088A4F0 /* RegisterViewModel.swift */,
+			);
+			path = Register;
+			sourceTree = "<group>";
+		};
 		D274FE23216A83C10096D02D = {
 			isa = PBXGroup;
 			children = (
@@ -223,6 +236,7 @@
 		D274FE2E216A83C10096D02D /* Lecture Sign In */ = {
 			isa = PBXGroup;
 			children = (
+				D25C879121F16AD00088A4F0 /* Register */,
 				D274FE2F216A83C10096D02D /* AppDelegate.swift */,
 				D2C8B8702198DAB10029CBB6 /* Login */,
 				846732D4217BA00900C68C0E /* Dashboard */,
@@ -525,11 +539,13 @@
 				846732D0217B9A3F00C68C0E /* DashboardViewModel.swift in Sources */,
 				D274FE30216A83C10096D02D /* AppDelegate.swift in Sources */,
 				D2C8B8762198DCD60029CBB6 /* LoginViewModel.swift in Sources */,
+				D25C879621F16BF00088A4F0 /* RegisterViewController.swift in Sources */,
 				846732CC217B979E00C68C0E /* LoginService.swift in Sources */,
 				D2C8B86D2198D9290029CBB6 /* ErrorResponse.swift in Sources */,
 				D2AFD4242178E8D800B2B917 /* TokenResponse.swift in Sources */,
 				D21747F7217D1F81000FD7B8 /* EmptyResponse.swift in Sources */,
 				8474FE122184ADBE004023E3 /* CompareFaceResponse.swift in Sources */,
+				D25C879821F261D10088A4F0 /* RegisterViewModel.swift in Sources */,
 				D21747F5217D1F4E000FD7B8 /* ImageRequest.swift in Sources */,
 				D21747F3217D1F2F000FD7B8 /* UserService.swift in Sources */,
 				D2AFD4262178E90100B2B917 /* RegisterRequest.swift in Sources */,
