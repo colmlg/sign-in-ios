@@ -16,8 +16,6 @@ class DashboardViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         viewModel.faceImage.asObservable().bind(to: imageView.rx.image).disposed(by: disposeBag)
-        
-        viewModel.login()
         beaconManager.delegate = self
         beaconManager.startMonitoring()
     }

@@ -9,14 +9,6 @@ class DashboardViewModel {
     var faceImage = Variable<UIImage?>(nil)
     var roomNumber = Variable<String?>(nil)
     
-    func login() {
-        let user = LoginRequest(id: "student", password: "Password1")
-        
-        LoginService().login(request: user).subscribe(onNext: { tokenResponse in
-            KeychainSwift().set(tokenResponse.token, forKey: "Access Token")
-        }, onError: handleError).disposed(by: disposeBag)
-    }
-    
     func setImage(image: UIImage) {
         let resizedImage = image.resizeImage(500.0, opaque: true)
         guard let imageData = UIImageJPEGRepresentation(resizedImage, 0.5) else {
