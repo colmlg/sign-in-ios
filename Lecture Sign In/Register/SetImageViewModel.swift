@@ -17,12 +17,6 @@ class SetImageViewModel {
         UserService().setImage(model: request).subscribe(onNext: { _ in
             HUD.flash(.success)
             completion()
-        }, onError: handleError).disposed(by: disposeBag)
-    }
-    
-    func handleError(_ error: Error) {
-        HUD.flash(.error)
-        let errorResponse = error as? ErrorResponse
-        print(errorResponse?.error)
+        }, onError: ErrorHandler.handleError).disposed(by: disposeBag)
     }
 }

@@ -6,8 +6,7 @@ import RxCocoa
 class DashboardViewController: UIViewController {
     
     @IBOutlet weak var roomNumberLabel: UILabel!
-    @IBOutlet weak var imageView: UIImageView!
-    @IBOutlet weak var refernceSwitch: UISwitch!
+    @IBOutlet weak var markAttendanceButton: UIButton!
     
     private let disposeBag = DisposeBag()
     private let beaconManager = BeaconManager()
@@ -15,7 +14,6 @@ class DashboardViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        viewModel.faceImage.asObservable().bind(to: imageView.rx.image).disposed(by: disposeBag)
         beaconManager.delegate = self
         beaconManager.startMonitoring()
     }
@@ -47,12 +45,8 @@ extension DashboardViewController: UIImagePickerControllerDelegate, UINavigation
         }
         viewModel.faceImage.value = image
         dismiss(animated: true, completion: {
-            if self.refernceSwitch.isOn {
-                self.viewModel.setImage(image: image)
-            } else {
-                self.viewModel.compareFaces(image: image, completion: { success in
-                    self.showAlertDialog(text: success ? "Faces are Identical!" : "Not the same face!")
-                })
+            self.viewModel.markAttendance {
+                self.showAlertDialog(text: "Successfully marked attendance")
             }
         })
         
@@ -66,5 +60,6 @@ extension DashboardViewController: BeaconManagerDelegate {
             return
         }
         roomNumberLabel.text = "Room Number: \(beacon.major), \(beacon.minor)"
+        viewModel.roomNumber.value = "\(beacon.minor)"
     }
 }

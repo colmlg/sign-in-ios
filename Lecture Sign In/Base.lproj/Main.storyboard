@@ -103,55 +103,32 @@
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="AeE-kB-ype"/>
                                 </constraints>
-                                <state key="normal" title="Open Camera">
-                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <state key="normal" title="Mark Attendance">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                                 <connections>
                                     <action selector="openCameraPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ev7-eC-ate"/>
                                 </connections>
                             </button>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="fgX-Xb-kZg">
-                                <rect key="frame" x="0.0" y="98" width="375" height="419"/>
-                            </imageView>
-                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="pst-Dj-Cd6">
-                                <rect key="frame" x="163" y="604" width="49" height="31"/>
-                            </switch>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Set Reference:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8Tk-mH-rNj">
-                                <rect key="frame" x="42" y="609" width="113" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="pst-Dj-Cd6" secondAttribute="bottom" constant="32" id="1Hw-31-tV2"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="f5J-gc-8GU" secondAttribute="bottom" constant="100" id="244-L4-Ydb"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="pst-Dj-Cd6" secondAttribute="trailing" constant="165" id="3S9-eF-QB1"/>
                             <constraint firstItem="s5A-Kg-zj4" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="57" id="Gos-eE-nwS"/>
-                            <constraint firstItem="pst-Dj-Cd6" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="163" id="Vzt-hJ-Nf6"/>
-                            <constraint firstItem="pst-Dj-Cd6" firstAttribute="leading" secondItem="8Tk-mH-rNj" secondAttribute="trailing" constant="8" id="WRV-mv-TfH"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="f5J-gc-8GU" secondAttribute="trailing" id="ZJ0-WB-cZu"/>
                             <constraint firstItem="f5J-gc-8GU" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="aY7-hQ-Wu5"/>
-                            <constraint firstItem="f5J-gc-8GU" firstAttribute="top" secondItem="fgX-Xb-kZg" secondAttribute="bottom" id="aYi-Of-sHb"/>
-                            <constraint firstItem="fgX-Xb-kZg" firstAttribute="top" secondItem="s5A-Kg-zj4" secondAttribute="bottom" id="cAi-rJ-tev"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="8Tk-mH-rNj" secondAttribute="bottom" constant="37" id="f8F-X2-epd"/>
                             <constraint firstItem="s5A-Kg-zj4" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="g53-vr-zqy"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="fgX-Xb-kZg" secondAttribute="trailing" id="gLj-nK-VxZ"/>
-                            <constraint firstItem="8Tk-mH-rNj" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="42" id="hjr-GM-Qrw"/>
-                            <constraint firstItem="fgX-Xb-kZg" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="pDZ-2n-MNm"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <connections>
-                        <outlet property="imageView" destination="fgX-Xb-kZg" id="Vdj-m0-bgV"/>
-                        <outlet property="refernceSwitch" destination="pst-Dj-Cd6" id="RiI-dl-k6M"/>
+                        <outlet property="markAttendanceButton" destination="f5J-gc-8GU" id="x8U-Xg-rb9"/>
                         <outlet property="roomNumberLabel" destination="s5A-Kg-zj4" id="S4M-4n-Ciw"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1222" y="471"/>
+            <point key="canvasLocation" x="1638" y="477"/>
         </scene>
         <!--Register View Controller-->
         <scene sceneID="0qe-Oq-XIy">

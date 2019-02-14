@@ -26,14 +26,6 @@ class RegisterViewModel {
         RegisterService().register(model: request).subscribe(onNext: { response in
             KeychainSwift().set(response.token, forKey: "Access Token")
             completion()
-        }, onError: handleError).disposed(by: disposeBag)
-    }
-    
-    //TODO: Put this function in some shared location. Also, display more descriptive error messages.
-    private func handleError(error: Error) {
-        HUD.flash(.error)
-        if let errorResponse = error as? ErrorResponse {
-            print(errorResponse.error)
-        }
+        }, onError: ErrorHandler.handleError).disposed(by: disposeBag)
     }
 }
