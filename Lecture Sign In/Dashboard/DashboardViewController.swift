@@ -30,7 +30,7 @@ class DashboardViewController: UIViewController {
     }
     
     func showAlertDialog(text: String) {
-        let controller = UIAlertController(title: "Faces Compared", message: text, preferredStyle: .alert)
+        let controller = UIAlertController(title: "Request Complete", message: text, preferredStyle: .alert)
         let okayButton = UIAlertAction(title: "OK", style: .default, handler: nil)
         controller.addAction(okayButton)
         show(controller, sender: nil)
@@ -45,9 +45,11 @@ extension DashboardViewController: UIImagePickerControllerDelegate, UINavigation
         }
         viewModel.faceImage.value = image
         dismiss(animated: true, completion: {
-            self.viewModel.markAttendance {
+            self.viewModel.markAttendance(completion: {
                 self.showAlertDialog(text: "Successfully marked attendance")
-            }
+            }, error: { errorMessage in
+                self.showAlertDialog(text: errorMessage)
+            })
         })
         
     }
@@ -59,7 +61,12 @@ extension DashboardViewController: BeaconManagerDelegate {
             roomNumberLabel.text = "Room Number: "
             return
         }
-        roomNumberLabel.text = "Room Number: \(beacon.major), \(beacon.minor)"
-        viewModel.roomNumber.value = "\(beacon.minor)"
+        
+        guard let roomNumber = Int("\(beacon.minor)") else {
+            return
+        }
+        
+        roomNumberLabel.text = "Room Number: \(roomNumber)"
+        viewModel.roomNumber.value = "\(roomNumber)"
     }
 }

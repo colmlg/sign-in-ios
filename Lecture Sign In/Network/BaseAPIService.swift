@@ -4,7 +4,7 @@ import RxSwift
 import KeychainSwift
 
 class BaseAPIService {
-    private let baseUrl = "http://afe225a7.ngrok.io"
+    private let baseUrl = "http://fef500c2.ngrok.io"
     
     func post<T: Codable>(model: Codable, endPoint: String) -> Observable<T> {
         guard let url = URL(string: self.baseUrl + endPoint) else {
@@ -20,7 +20,7 @@ class BaseAPIService {
                 
                 if let status = response.response?.statusCode, status != 200 {
                     let errorResponse = try? JSONDecoder().decode(ErrorResponse.self, from: response.data!)
-                    return observer.onError(errorResponse ?? ErrorResponse(error: "Inavlid Response"))
+                    return observer.onError(errorResponse ?? ErrorResponse(error: "Inavlid Response status \(status)"))
                 }
                 
                 guard let data = response.data,

@@ -1,7 +1,7 @@
 import RxSwift
 import KeychainSwift
 import PKHUD
-
+//swiftlint:disable identifier_name
 class DashboardViewModel {
     
     private let disposeBag = DisposeBag()
@@ -9,8 +9,9 @@ class DashboardViewModel {
     var faceImage = Variable<UIImage?>(nil)
     var roomNumber = Variable<String?>(nil)
     
-    func markAttendance(completion: @escaping (() -> Void)) {
+    func markAttendance(completion: @escaping (() -> Void), error: @escaping ((String) -> Void)) {
         guard let roomNumber = roomNumber.value, let image = faceImage.value else {
+            error("No room number or image.")
             return
         }
         
@@ -25,7 +26,11 @@ class DashboardViewModel {
         AttendanceService().markAttendance(model: request).subscribe(onNext: { _ in
             HUD.flash(.success)
             completion()
-        }, onError: ErrorHandler.handleError).disposed(by: disposeBag)
+        }, onError: { e in
+            HUD.hide()
+            let errorResponse = e as? ErrorResponse
+            error(errorResponse?.error ?? "")
+        }).disposed(by: disposeBag)
         
     }
 }
