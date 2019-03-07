@@ -4,7 +4,7 @@ import RxSwift
 import KeychainSwift
 
 class BaseAPIService {
-    private let baseUrl = "http://sign-in-backend.northeurope.cloudapp.azure.com:3000"
+    private let baseUrl = "http://fef500c2.ngrok.io"
     
     func post<T: Codable>(model: Codable, endPoint: String) -> Observable<T> {
         guard let url = URL(string: self.baseUrl + endPoint) else {
@@ -18,8 +18,9 @@ class BaseAPIService {
         return Observable.create { observer in
             Alamofire.request(request).response { (response) in
                 
-                if let status = response.response?.statusCode, status == 403 {
-                    
+                if let status = response.response?.statusCode, status != 200 {
+                    let errorResponse = try? JSONDecoder().decode(ErrorResponse.self, from: response.data!)
+                    return observer.onError(errorResponse ?? ErrorResponse(error: "Inavlid Response status \(status)"))
                 }
                 
                 guard let data = response.data,

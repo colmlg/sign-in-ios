@@ -12,13 +12,21 @@
 		846732CE217B97C700C68C0E /* LoginRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 846732CD217B97C700C68C0E /* LoginRequest.swift */; };
 		846732D0217B9A3F00C68C0E /* DashboardViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 846732CF217B9A3F00C68C0E /* DashboardViewModel.swift */; };
 		8474FE122184ADBE004023E3 /* CompareFaceResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8474FE112184ADBE004023E3 /* CompareFaceResponse.swift */; };
+		D20421632215AE2F004A22FE /* AttendanceService.swift in Sources */ = {isa = PBXBuildFile; fileRef = D20421622215AE2F004A22FE /* AttendanceService.swift */; };
+		D20421652215AE4E004A22FE /* AttendanceRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = D20421642215AE4E004A22FE /* AttendanceRequest.swift */; };
+		D20421672215AEA5004A22FE /* ErrorHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = D20421662215AEA5004A22FE /* ErrorHandler.swift */; };
 		D21747F3217D1F2F000FD7B8 /* UserService.swift in Sources */ = {isa = PBXBuildFile; fileRef = D21747F2217D1F2F000FD7B8 /* UserService.swift */; };
 		D21747F5217D1F4E000FD7B8 /* ImageRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = D21747F4217D1F4E000FD7B8 /* ImageRequest.swift */; };
 		D21747F7217D1F81000FD7B8 /* EmptyResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = D21747F6217D1F81000FD7B8 /* EmptyResponse.swift */; };
 		D21747F9217D249F000FD7B8 /* UIImageExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = D21747F8217D249F000FD7B8 /* UIImageExtensions.swift */; };
+		D228419D2203443700CAB864 /* StringExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = D228419C2203443700CAB864 /* StringExtensions.swift */; };
+		D228419F22034D2100CAB864 /* SetImageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D228419E22034D2100CAB864 /* SetImageViewController.swift */; };
+		D22841A122034D4800CAB864 /* SetImageViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D22841A022034D4800CAB864 /* SetImageViewModel.swift */; };
 		D23A255C216E93DE00ACF98D /* Repository.swift in Sources */ = {isa = PBXBuildFile; fileRef = D23A255B216E93DE00ACF98D /* Repository.swift */; };
 		D25271D4216FB4B600DDC167 /* BeaconManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D25271D3216FB4B600DDC167 /* BeaconManager.swift */; };
 		D25271D6216FB85700DDC167 /* BaseAPIService.swift in Sources */ = {isa = PBXBuildFile; fileRef = D25271D5216FB85700DDC167 /* BaseAPIService.swift */; };
+		D25C879621F16BF00088A4F0 /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D25C879521F16BF00088A4F0 /* RegisterViewController.swift */; };
+		D25C879821F261D10088A4F0 /* RegisterViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D25C879721F261D10088A4F0 /* RegisterViewModel.swift */; };
 		D274FE30216A83C10096D02D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D274FE2F216A83C10096D02D /* AppDelegate.swift */; };
 		D274FE32216A83C10096D02D /* DashboardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D274FE31216A83C10096D02D /* DashboardViewController.swift */; };
 		D274FE35216A83C10096D02D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D274FE33216A83C10096D02D /* Main.storyboard */; };
@@ -67,13 +75,21 @@
 		846732CF217B9A3F00C68C0E /* DashboardViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardViewModel.swift; sourceTree = "<group>"; };
 		8474FE112184ADBE004023E3 /* CompareFaceResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompareFaceResponse.swift; sourceTree = "<group>"; };
 		C6E356D92B7DA7CEFDA751DA /* Pods_Lecture_Sign_InUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Lecture_Sign_InUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		D20421622215AE2F004A22FE /* AttendanceService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AttendanceService.swift; sourceTree = "<group>"; };
+		D20421642215AE4E004A22FE /* AttendanceRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AttendanceRequest.swift; sourceTree = "<group>"; };
+		D20421662215AEA5004A22FE /* ErrorHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorHandler.swift; sourceTree = "<group>"; };
 		D21747F2217D1F2F000FD7B8 /* UserService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserService.swift; sourceTree = "<group>"; };
 		D21747F4217D1F4E000FD7B8 /* ImageRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageRequest.swift; sourceTree = "<group>"; };
 		D21747F6217D1F81000FD7B8 /* EmptyResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmptyResponse.swift; sourceTree = "<group>"; };
 		D21747F8217D249F000FD7B8 /* UIImageExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIImageExtensions.swift; sourceTree = "<group>"; };
+		D228419C2203443700CAB864 /* StringExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringExtensions.swift; sourceTree = "<group>"; };
+		D228419E22034D2100CAB864 /* SetImageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetImageViewController.swift; sourceTree = "<group>"; };
+		D22841A022034D4800CAB864 /* SetImageViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetImageViewModel.swift; sourceTree = "<group>"; };
 		D23A255B216E93DE00ACF98D /* Repository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Repository.swift; sourceTree = "<group>"; };
 		D25271D3216FB4B600DDC167 /* BeaconManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BeaconManager.swift; sourceTree = "<group>"; };
 		D25271D5216FB85700DDC167 /* BaseAPIService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseAPIService.swift; sourceTree = "<group>"; };
+		D25C879521F16BF00088A4F0 /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
+		D25C879721F261D10088A4F0 /* RegisterViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewModel.swift; sourceTree = "<group>"; };
 		D274FE2C216A83C10096D02D /* Lecture Sign In.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Lecture Sign In.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D274FE2F216A83C10096D02D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D274FE31216A83C10096D02D /* DashboardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardViewController.swift; sourceTree = "<group>"; };
@@ -178,6 +194,15 @@
 			path = Dashboard;
 			sourceTree = "<group>";
 		};
+		D20421612215AE20004A22FE /* Attendance */ = {
+			isa = PBXGroup;
+			children = (
+				D20421622215AE2F004A22FE /* AttendanceService.swift */,
+				D20421642215AE4E004A22FE /* AttendanceRequest.swift */,
+			);
+			path = Attendance;
+			sourceTree = "<group>";
+		};
 		D21747F1217D1F1C000FD7B8 /* User */ = {
 			isa = PBXGroup;
 			children = (
@@ -195,6 +220,17 @@
 				D23A255B216E93DE00ACF98D /* Repository.swift */,
 			);
 			path = "Data Layer";
+			sourceTree = "<group>";
+		};
+		D25C879121F16AD00088A4F0 /* Register */ = {
+			isa = PBXGroup;
+			children = (
+				D25C879521F16BF00088A4F0 /* RegisterViewController.swift */,
+				D25C879721F261D10088A4F0 /* RegisterViewModel.swift */,
+				D228419E22034D2100CAB864 /* SetImageViewController.swift */,
+				D22841A022034D4800CAB864 /* SetImageViewModel.swift */,
+			);
+			path = Register;
 			sourceTree = "<group>";
 		};
 		D274FE23216A83C10096D02D = {
@@ -223,6 +259,7 @@
 		D274FE2E216A83C10096D02D /* Lecture Sign In */ = {
 			isa = PBXGroup;
 			children = (
+				D25C879121F16AD00088A4F0 /* Register */,
 				D274FE2F216A83C10096D02D /* AppDelegate.swift */,
 				D2C8B8702198DAB10029CBB6 /* Login */,
 				846732D4217BA00900C68C0E /* Dashboard */,
@@ -230,6 +267,8 @@
 				D23A2558216E933B00ACF98D /* Data Layer */,
 				D25271D3216FB4B600DDC167 /* BeaconManager.swift */,
 				D21747F8217D249F000FD7B8 /* UIImageExtensions.swift */,
+				D228419C2203443700CAB864 /* StringExtensions.swift */,
+				D20421662215AEA5004A22FE /* ErrorHandler.swift */,
 				D274FE33216A83C10096D02D /* Main.storyboard */,
 				D274FE36216A83C20096D02D /* Assets.xcassets */,
 				D274FE38216A83C20096D02D /* LaunchScreen.storyboard */,
@@ -259,6 +298,7 @@
 		D2AFD4272178EDA000B2B917 /* Network */ = {
 			isa = PBXGroup;
 			children = (
+				D20421612215AE20004A22FE /* Attendance */,
 				D21747F1217D1F1C000FD7B8 /* User */,
 				846732CA217B978400C68C0E /* Login */,
 				846732C9217B976400C68C0E /* Register */,
@@ -517,19 +557,27 @@
 			buildActionMask = 2147483647;
 			files = (
 				D274FE32216A83C10096D02D /* DashboardViewController.swift in Sources */,
+				D20421672215AEA5004A22FE /* ErrorHandler.swift in Sources */,
 				D2C8B86F2198D9490029CBB6 /* EncodableExtensions.swift in Sources */,
 				D25271D4216FB4B600DDC167 /* BeaconManager.swift in Sources */,
+				D22841A122034D4800CAB864 /* SetImageViewModel.swift in Sources */,
+				D20421652215AE4E004A22FE /* AttendanceRequest.swift in Sources */,
 				D25271D6216FB85700DDC167 /* BaseAPIService.swift in Sources */,
 				D2C8B8732198DACE0029CBB6 /* LoginViewController.swift in Sources */,
+				D228419F22034D2100CAB864 /* SetImageViewController.swift in Sources */,
 				846732CE217B97C700C68C0E /* LoginRequest.swift in Sources */,
 				846732D0217B9A3F00C68C0E /* DashboardViewModel.swift in Sources */,
 				D274FE30216A83C10096D02D /* AppDelegate.swift in Sources */,
+				D20421632215AE2F004A22FE /* AttendanceService.swift in Sources */,
 				D2C8B8762198DCD60029CBB6 /* LoginViewModel.swift in Sources */,
+				D25C879621F16BF00088A4F0 /* RegisterViewController.swift in Sources */,
 				846732CC217B979E00C68C0E /* LoginService.swift in Sources */,
 				D2C8B86D2198D9290029CBB6 /* ErrorResponse.swift in Sources */,
+				D228419D2203443700CAB864 /* StringExtensions.swift in Sources */,
 				D2AFD4242178E8D800B2B917 /* TokenResponse.swift in Sources */,
 				D21747F7217D1F81000FD7B8 /* EmptyResponse.swift in Sources */,
 				8474FE122184ADBE004023E3 /* CompareFaceResponse.swift in Sources */,
+				D25C879821F261D10088A4F0 /* RegisterViewModel.swift in Sources */,
 				D21747F5217D1F4E000FD7B8 /* ImageRequest.swift in Sources */,
 				D21747F3217D1F2F000FD7B8 /* UserService.swift in Sources */,
 				D2AFD4262178E90100B2B917 /* RegisterRequest.swift in Sources */,

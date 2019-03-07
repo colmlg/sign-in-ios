@@ -1,5 +1,5 @@
 import Foundation
-import  RealmSwift
+import RealmSwift
 
 class Repository<T: Object> {
     

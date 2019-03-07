@@ -15,13 +15,6 @@ class LoginViewModel {
         service.login(request: LoginRequest(id: username.value, password: password.value)).subscribe(onNext: { response in
             KeychainSwift().set(response.token, forKey: "Access Token")
             completion()
-        }, onError: handleError).disposed(by: disposeBag)
-    }
-    
-    private func handleError(error: Error) {
-        HUD.flash(.error)
-        if let errorResponse = error as? ErrorResponse {
-            print(errorResponse.error)
-        }
+        }, onError: ErrorHandler.handleError).disposed(by: disposeBag)
     }
 }
