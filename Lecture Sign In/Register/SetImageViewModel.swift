@@ -4,10 +4,10 @@ import PKHUD
 
 class SetImageViewModel {
     private let disposeBag = DisposeBag()
-    let faceImage = Variable<UIImage?>(nil)
+    let faceImage = Variable<UIImage>(#imageLiteral(resourceName: "vectorpaint"))
     
     func setImage(completion: @escaping () -> Void) {
-        let resizedImage = faceImage.value!.resizeImage(500.0, opaque: true)
+        let resizedImage = faceImage.value.resizeImage(500.0, opaque: true)
         guard let imageData = UIImageJPEGRepresentation(resizedImage, 0.5) else {
             return
         }
