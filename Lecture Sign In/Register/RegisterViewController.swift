@@ -20,6 +20,11 @@ class RegisterViewController: UIViewController {
         viewModel.shouldEnableButton.bind(to: nextButton.rx.isEnabled).disposed(by: disposeBag)
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        navigationController?.setNavigationBarHidden(false, animated: false)
+    }
+    
     @IBAction func nextButtonPressed(_ sender: Any) {
         viewModel.register {
             self.performSegue(withIdentifier: "goToSetImage", sender: nil)
