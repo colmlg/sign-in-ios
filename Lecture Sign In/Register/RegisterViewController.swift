@@ -18,6 +18,10 @@ class RegisterViewController: UIViewController {
         passwordField.rx.text.orEmpty.bind(to: viewModel.password).disposed(by: disposeBag)
         confirmPasswordField.rx.text.orEmpty.bind(to: viewModel.confirmPassword).disposed(by: disposeBag)
         viewModel.shouldEnableButton.bind(to: nextButton.rx.isEnabled).disposed(by: disposeBag)
+        
+        navigationController?.navigationBar.barTintColor = #colorLiteral(red: 0.1212944761, green: 0.1292245686, blue: 0.141699791, alpha: 1)
+        navigationController?.navigationBar.titleTextAttributes = [NSAttributedStringKey.foregroundColor: UIColor.white]
+        title = "Register"
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -29,5 +33,9 @@ class RegisterViewController: UIViewController {
         viewModel.register {
             self.performSegue(withIdentifier: "goToSetImage", sender: nil)
         }
+    }
+    
+    override var preferredStatusBarStyle: UIStatusBarStyle {
+        return .lightContent
     }
 }
