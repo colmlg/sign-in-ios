@@ -8,6 +8,10 @@ class DashboardViewController: UIViewController {
     @IBOutlet weak var roomNumberLabel: UILabel!
     @IBOutlet weak var markAttendanceButton: UIButton!
     
+    override var preferredStatusBarStyle: UIStatusBarStyle {
+        return .lightContent
+    }
+    
     private let disposeBag = DisposeBag()
     private let beaconManager = BeaconManager()
     private let viewModel = DashboardViewModel()
