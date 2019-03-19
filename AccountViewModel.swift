@@ -3,12 +3,15 @@ import Foundation
 class AccountViewModel {
     
     let user: User?
+    let repo = Repository<User>()
     
     init() {
-        user = Repository<User>().findOne(key: "User")
+        user = repo.findOne(key: "User")
     }
     
     func logout() {
-        user?.realm?.delete(user!)
+        if let user = user {
+            repo.remove(user)
+        }
     }
 }

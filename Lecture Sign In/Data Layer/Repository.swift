@@ -38,4 +38,15 @@ class Repository<T: Object> {
             print(error.localizedDescription)
         }
     }
+    
+    func remove(_ object: T) {
+        do {
+            try realm?.write {
+                realm?.delete(object)
+            }
+        } catch {
+            print("Error saving object of type \(T.self)")
+            print(error.localizedDescription)
+        }
+    }
 }
