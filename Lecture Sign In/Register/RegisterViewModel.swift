@@ -25,6 +25,9 @@ class RegisterViewModel {
         let request = RegisterRequest(id: studentId.value, password: password.value)
         RegisterService().register(model: request).subscribe(onNext: { response in
             KeychainSwift().set(response.token, forKey: "Access Token")
+            let user = User()
+            user.studentNumber = self.studentId.value
+            Repository<User>().save(object: user)
             completion()
         }, onError: ErrorHandler.handleError).disposed(by: disposeBag)
     }

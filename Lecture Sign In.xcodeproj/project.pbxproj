@@ -29,6 +29,13 @@
 		D25271D6216FB85700DDC167 /* BaseAPIService.swift in Sources */ = {isa = PBXBuildFile; fileRef = D25271D5216FB85700DDC167 /* BaseAPIService.swift */; };
 		D25C879621F16BF00088A4F0 /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D25C879521F16BF00088A4F0 /* RegisterViewController.swift */; };
 		D25C879821F261D10088A4F0 /* RegisterViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D25C879721F261D10088A4F0 /* RegisterViewModel.swift */; };
+		D274C710224178CE00FDCFB7 /* AccountViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D274C70F224178CE00FDCFB7 /* AccountViewController.swift */; };
+		D274C7132241799400FDCFB7 /* AccountViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D274C7122241799400FDCFB7 /* AccountViewModel.swift */; };
+		D274C7172241817000FDCFB7 /* TimetableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D274C7162241817000FDCFB7 /* TimetableViewController.swift */; };
+		D274C7192241818900FDCFB7 /* TimetableViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D274C7182241818900FDCFB7 /* TimetableViewModel.swift */; };
+		D274C71E224181F300FDCFB7 /* HistoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D274C71D224181F300FDCFB7 /* HistoryViewController.swift */; };
+		D274C720224181FB00FDCFB7 /* HistoryViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D274C71F224181FB00FDCFB7 /* HistoryViewModel.swift */; };
+		D274C722224182C200FDCFB7 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = D274C721224182C200FDCFB7 /* User.swift */; };
 		D274FE30216A83C10096D02D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D274FE2F216A83C10096D02D /* AppDelegate.swift */; };
 		D274FE32216A83C10096D02D /* DashboardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D274FE31216A83C10096D02D /* DashboardViewController.swift */; };
 		D274FE35216A83C10096D02D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D274FE33216A83C10096D02D /* Main.storyboard */; };
@@ -94,6 +101,13 @@
 		D25271D5216FB85700DDC167 /* BaseAPIService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseAPIService.swift; sourceTree = "<group>"; };
 		D25C879521F16BF00088A4F0 /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
 		D25C879721F261D10088A4F0 /* RegisterViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewModel.swift; sourceTree = "<group>"; };
+		D274C70F224178CE00FDCFB7 /* AccountViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountViewController.swift; sourceTree = "<group>"; };
+		D274C7122241799400FDCFB7 /* AccountViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountViewModel.swift; sourceTree = "<group>"; };
+		D274C7162241817000FDCFB7 /* TimetableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimetableViewController.swift; sourceTree = "<group>"; };
+		D274C7182241818900FDCFB7 /* TimetableViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimetableViewModel.swift; sourceTree = "<group>"; };
+		D274C71D224181F300FDCFB7 /* HistoryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryViewController.swift; sourceTree = "<group>"; };
+		D274C71F224181FB00FDCFB7 /* HistoryViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryViewModel.swift; sourceTree = "<group>"; };
+		D274C721224182C200FDCFB7 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		D274FE2C216A83C10096D02D /* Lecture Sign In.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Lecture Sign In.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D274FE2F216A83C10096D02D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D274FE31216A83C10096D02D /* DashboardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardViewController.swift; sourceTree = "<group>"; };
@@ -231,6 +245,7 @@
 			isa = PBXGroup;
 			children = (
 				D23A255B216E93DE00ACF98D /* Repository.swift */,
+				D274C721224182C200FDCFB7 /* User.swift */,
 			);
 			path = "Data Layer";
 			sourceTree = "<group>";
@@ -244,6 +259,34 @@
 				D22841A022034D4800CAB864 /* SetImageViewModel.swift */,
 			);
 			path = Register;
+			sourceTree = "<group>";
+		};
+		D274C711224178D800FDCFB7 /* Account */ = {
+			isa = PBXGroup;
+			children = (
+				D274C70F224178CE00FDCFB7 /* AccountViewController.swift */,
+				D274C7122241799400FDCFB7 /* AccountViewModel.swift */,
+			);
+			name = Account;
+			path = ..;
+			sourceTree = "<group>";
+		};
+		D274C7142241814300FDCFB7 /* Timetable */ = {
+			isa = PBXGroup;
+			children = (
+				D274C7162241817000FDCFB7 /* TimetableViewController.swift */,
+				D274C7182241818900FDCFB7 /* TimetableViewModel.swift */,
+			);
+			path = Timetable;
+			sourceTree = "<group>";
+		};
+		D274C7152241814B00FDCFB7 /* History */ = {
+			isa = PBXGroup;
+			children = (
+				D274C71D224181F300FDCFB7 /* HistoryViewController.swift */,
+				D274C71F224181FB00FDCFB7 /* HistoryViewModel.swift */,
+			);
+			path = History;
 			sourceTree = "<group>";
 		};
 		D274FE23216A83C10096D02D = {
@@ -272,20 +315,23 @@
 		D274FE2E216A83C10096D02D /* Lecture Sign In */ = {
 			isa = PBXGroup;
 			children = (
-				D25C879121F16AD00088A4F0 /* Register */,
-				D274FE2F216A83C10096D02D /* AppDelegate.swift */,
-				D2C8B8702198DAB10029CBB6 /* Login */,
+				D274C7152241814B00FDCFB7 /* History */,
+				D274C7142241814300FDCFB7 /* Timetable */,
+				D274C711224178D800FDCFB7 /* Account */,
 				846732D4217BA00900C68C0E /* Dashboard */,
-				D2AFD4272178EDA000B2B917 /* Network */,
 				D23A2558216E933B00ACF98D /* Data Layer */,
-				D25271D3216FB4B600DDC167 /* BeaconManager.swift */,
-				D21747F8217D249F000FD7B8 /* UIImageExtensions.swift */,
-				D228419C2203443700CAB864 /* StringExtensions.swift */,
-				D20421662215AEA5004A22FE /* ErrorHandler.swift */,
-				D274FE33216A83C10096D02D /* Main.storyboard */,
-				D274FE36216A83C20096D02D /* Assets.xcassets */,
+				D2C8B8702198DAB10029CBB6 /* Login */,
+				D2AFD4272178EDA000B2B917 /* Network */,
+				D25C879121F16AD00088A4F0 /* Register */,
 				D274FE38216A83C20096D02D /* LaunchScreen.storyboard */,
+				D274FE33216A83C10096D02D /* Main.storyboard */,
+				D274FE2F216A83C10096D02D /* AppDelegate.swift */,
+				D25271D3216FB4B600DDC167 /* BeaconManager.swift */,
+				D20421662215AEA5004A22FE /* ErrorHandler.swift */,
+				D228419C2203443700CAB864 /* StringExtensions.swift */,
+				D21747F8217D249F000FD7B8 /* UIImageExtensions.swift */,
 				D274FE3B216A83C20096D02D /* Info.plist */,
+				D274FE36216A83C20096D02D /* Assets.xcassets */,
 			);
 			path = "Lecture Sign In";
 			sourceTree = "<group>";
@@ -406,6 +452,7 @@
 				TargetAttributes = {
 					D274FE2B216A83C10096D02D = {
 						CreatedOnToolsVersion = 9.4.1;
+						LastSwiftMigration = 1010;
 					};
 					D274FE3F216A83C20096D02D = {
 						CreatedOnToolsVersion = 9.4.1;
@@ -579,18 +626,24 @@
 				D22841A122034D4800CAB864 /* SetImageViewModel.swift in Sources */,
 				D20421652215AE4E004A22FE /* AttendanceRequest.swift in Sources */,
 				D25271D6216FB85700DDC167 /* BaseAPIService.swift in Sources */,
+				D274C710224178CE00FDCFB7 /* AccountViewController.swift in Sources */,
 				D213646C224132200096B55E /* RoomService.swift in Sources */,
 				D2C8B8732198DACE0029CBB6 /* LoginViewController.swift in Sources */,
+				D274C7132241799400FDCFB7 /* AccountViewModel.swift in Sources */,
 				D228419F22034D2100CAB864 /* SetImageViewController.swift in Sources */,
 				846732CE217B97C700C68C0E /* LoginRequest.swift in Sources */,
+				D274C7172241817000FDCFB7 /* TimetableViewController.swift in Sources */,
 				846732D0217B9A3F00C68C0E /* DashboardViewModel.swift in Sources */,
 				D274FE30216A83C10096D02D /* AppDelegate.swift in Sources */,
 				D20421632215AE2F004A22FE /* AttendanceService.swift in Sources */,
 				D213646F2241323E0096B55E /* Room.swift in Sources */,
 				D2C8B8762198DCD60029CBB6 /* LoginViewModel.swift in Sources */,
+				D274C720224181FB00FDCFB7 /* HistoryViewModel.swift in Sources */,
 				D25C879621F16BF00088A4F0 /* RegisterViewController.swift in Sources */,
 				846732CC217B979E00C68C0E /* LoginService.swift in Sources */,
 				D2C8B86D2198D9290029CBB6 /* ErrorResponse.swift in Sources */,
+				D274C722224182C200FDCFB7 /* User.swift in Sources */,
+				D274C7192241818900FDCFB7 /* TimetableViewModel.swift in Sources */,
 				D228419D2203443700CAB864 /* StringExtensions.swift in Sources */,
 				D2AFD4242178E8D800B2B917 /* TokenResponse.swift in Sources */,
 				D21747F7217D1F81000FD7B8 /* EmptyResponse.swift in Sources */,
@@ -601,6 +654,7 @@
 				D2AFD4262178E90100B2B917 /* RegisterRequest.swift in Sources */,
 				D21747F9217D249F000FD7B8 /* UIImageExtensions.swift in Sources */,
 				D2AFD4292178EDD900B2B917 /* RegisterService.swift in Sources */,
+				D274C71E224181F300FDCFB7 /* HistoryViewController.swift in Sources */,
 				D23A255C216E93DE00ACF98D /* Repository.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -775,6 +829,7 @@
 			baseConfigurationReference = 66F776717CFE60B5BB97CBB3 /* Pods-Lecture Sign In.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 37FT2A4DR2;
@@ -787,6 +842,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = me.colmlg.attendly;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
@@ -797,6 +853,7 @@
 			baseConfigurationReference = F87B09C18B1F7338E7009207 /* Pods-Lecture Sign In.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 37FT2A4DR2;

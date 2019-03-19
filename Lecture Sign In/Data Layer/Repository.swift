@@ -9,6 +9,10 @@ class Repository<T: Object> {
         return realm?.object(ofType: T.self, forPrimaryKey: key)
     }
     
+    func findOne(key: String) -> T? {
+        return realm?.object(ofType: T.self, forPrimaryKey: key)
+    }
+    
     func findAll() -> [T] {
         return realm?.objects(T.self).map { $0 } ?? []
     }
@@ -28,6 +32,17 @@ class Repository<T: Object> {
         do {
             try realm?.write {
                 realm?.add(objects, update: true)
+            }
+        } catch {
+            print("Error saving object of type \(T.self)")
+            print(error.localizedDescription)
+        }
+    }
+    
+    func remove(_ object: T) {
+        do {
+            try realm?.write {
+                realm?.delete(object)
             }
         } catch {
             print("Error saving object of type \(T.self)")

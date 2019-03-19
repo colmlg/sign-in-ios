@@ -11,9 +11,19 @@ class LoginViewModel {
     private let service = LoginService()
     private let disposeBag = DisposeBag()
 
+    var isUserLoggedIn: Bool {
+        let users = Repository<User>().findAll()
+        return users.count > 0
+    }
+    
     func login(completion: @escaping () -> Void) {
         service.login(request: LoginRequest(id: username.value, password: password.value)).subscribe(onNext: { response in
             KeychainSwift().set(response.token, forKey: "Access Token")
+            
+            let user = User()
+            user.studentNumber = self.username.value
+            Repository<User>().save(object: user)
+            
             completion()
         }, onError: ErrorHandler.handleError).disposed(by: disposeBag)
     }

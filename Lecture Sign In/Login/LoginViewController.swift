@@ -22,6 +22,13 @@ class LoginViewController: UIViewController {
         navigationController?.setNavigationBarHidden(true, animated: false)
     }
     
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        if viewModel.isUserLoggedIn {
+            performSegue(withIdentifier: "login", sender: viewModel)
+        }
+    }
+    
     @IBAction func loginButtonPressed(_ sender: Any) {
         viewModel.login {
             self.performSegue(withIdentifier: "login", sender: sender)
