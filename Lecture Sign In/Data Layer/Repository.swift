@@ -9,6 +9,10 @@ class Repository<T: Object> {
         return realm?.object(ofType: T.self, forPrimaryKey: key)
     }
     
+    func findOne(key: String) -> T? {
+        return realm?.object(ofType: T.self, forPrimaryKey: key)
+    }
+    
     func findAll() -> [T] {
         return realm?.objects(T.self).map { $0 } ?? []
     }

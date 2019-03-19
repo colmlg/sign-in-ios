@@ -69,7 +69,7 @@
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Student Number" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="k6K-hg-SdY">
                                 <rect key="frame" x="16" y="210" width="343" height="26.5"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="22"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -94,7 +94,7 @@
                             </textField>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Password" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FQD-Aa-fng">
                                 <rect key="frame" x="16" y="282.5" width="343" height="27"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="22"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -147,14 +147,14 @@
                     <connections>
                         <outlet property="passwordTextField" destination="fen-ye-pa2" id="uo0-Tf-pFq"/>
                         <outlet property="usernameTextField" destination="xlx-my-QUf" id="0K8-bG-dPv"/>
-                        <segue destination="BYZ-38-t0r" kind="showDetail" identifier="login" id="5Xj-5x-Eci"/>
+                        <segue destination="cTa-le-T4J" kind="showDetail" identifier="login" id="2QN-Rv-XZs"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4FR-1u-mly" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="24.800000000000001" y="25.637181409295355"/>
         </scene>
-        <!--Dashboard View Controller-->
+        <!--Mark-->
         <scene sceneID="tne-QT-ifu">
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="DashboardViewController" customModule="Lecture_Sign_In" customModuleProvider="target" sceneMemberID="viewController">
@@ -202,6 +202,9 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <tabBarItem key="tabBarItem" title="Mark" image="approval" id="IAI-YT-B7R"/>
+                    <nil key="simulatedTopBarMetrics"/>
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics" barStyle="black"/>
                     <connections>
                         <outlet property="markAttendanceButton" destination="f5J-gc-8GU" id="x8U-Xg-rb9"/>
                         <outlet property="roomNumberLabel" destination="s5A-Kg-zj4" id="S4M-4n-Ciw"/>
@@ -209,7 +212,100 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1638" y="477"/>
+            <point key="canvasLocation" x="1031" y="1307"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="dII-XQ-uJd">
+            <objects>
+                <tabBarController id="cTa-le-T4J" sceneMemberID="viewController">
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" barStyle="black" id="WeA-Tk-udG">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="49"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="selectedImageTintColor" name="Brand Primary"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="viewControllers" id="bed-4b-vmU"/>
+                        <segue destination="aTP-gW-f4u" kind="relationship" relationship="viewControllers" id="ENg-Eu-5sq"/>
+                        <segue destination="qQa-b3-MLm" kind="relationship" relationship="viewControllers" id="QxH-0X-O3Y"/>
+                        <segue destination="Xht-jA-Wqy" kind="relationship" relationship="viewControllers" id="yYe-Lr-0IN"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="nM3-Re-Mza" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1638" y="547"/>
+        </scene>
+        <!--Settings-->
+        <scene sceneID="sdo-Lg-pZP">
+            <objects>
+                <viewController id="Xht-jA-Wqy" customClass="AccountViewController" customModule="Lecture_Sign_In" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Q5G-Ie-Je8">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="user_male" translatesAutoresizingMaskIntoConstraints="NO" id="M09-w8-XV7">
+                                <rect key="frame" x="16" y="36" width="90" height="90"/>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="90" id="3D8-XJ-yM9"/>
+                                    <constraint firstAttribute="height" constant="90" id="i1g-ph-FCx"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Student Number" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uqB-ll-Bao">
+                                <rect key="frame" x="114" y="36" width="253" height="27"/>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="22"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="15148823" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bqK-eI-oXr">
+                                <rect key="frame" x="114" y="71" width="253" height="24"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="snC-Zo-OPf">
+                                <rect key="frame" x="16" y="558" width="343" height="44"/>
+                                <color key="backgroundColor" name="Brand Primary"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="8Xa-JR-PfF"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="22"/>
+                                <state key="normal" title="LOGOUT">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="logoutButtonPressed:" destination="Xht-jA-Wqy" eventType="touchUpInside" id="HzK-wP-irJ"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" cocoaTouchSystemColor="viewFlipsideBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="bqK-eI-oXr" firstAttribute="top" secondItem="uqB-ll-Bao" secondAttribute="bottom" constant="8" id="8fg-yY-6y2"/>
+                            <constraint firstItem="2Si-nO-cUP" firstAttribute="bottom" secondItem="snC-Zo-OPf" secondAttribute="bottom" constant="16" id="A9U-lD-r6d"/>
+                            <constraint firstItem="snC-Zo-OPf" firstAttribute="leading" secondItem="2Si-nO-cUP" secondAttribute="leading" constant="16" id="EYe-Yp-xJn"/>
+                            <constraint firstItem="2Si-nO-cUP" firstAttribute="trailing" secondItem="uqB-ll-Bao" secondAttribute="trailing" constant="8" id="HdO-ml-csG"/>
+                            <constraint firstItem="2Si-nO-cUP" firstAttribute="trailing" secondItem="bqK-eI-oXr" secondAttribute="trailing" constant="8" id="NgV-ZI-ugf"/>
+                            <constraint firstItem="bqK-eI-oXr" firstAttribute="leading" secondItem="M09-w8-XV7" secondAttribute="trailing" constant="8" id="XYi-Ez-yZI"/>
+                            <constraint firstItem="M09-w8-XV7" firstAttribute="leading" secondItem="2Si-nO-cUP" secondAttribute="leading" constant="16" id="Yto-ZR-wNO"/>
+                            <constraint firstItem="M09-w8-XV7" firstAttribute="top" secondItem="2Si-nO-cUP" secondAttribute="top" constant="16" id="dVm-4Y-tDJ"/>
+                            <constraint firstItem="uqB-ll-Bao" firstAttribute="top" secondItem="2Si-nO-cUP" secondAttribute="top" constant="16" id="jGU-W3-GM7"/>
+                            <constraint firstItem="uqB-ll-Bao" firstAttribute="leading" secondItem="M09-w8-XV7" secondAttribute="trailing" constant="8" id="kKk-sZ-HHb"/>
+                            <constraint firstItem="2Si-nO-cUP" firstAttribute="trailing" secondItem="snC-Zo-OPf" secondAttribute="trailing" constant="16" id="mtY-nT-Grd"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="2Si-nO-cUP"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Settings" image="services" id="c9A-Wy-5Kg"/>
+                    <nil key="simulatedTopBarMetrics"/>
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics" barStyle="black"/>
+                    <connections>
+                        <outlet property="imageView" destination="M09-w8-XV7" id="iSw-UH-114"/>
+                        <outlet property="studentNumberLabel" destination="bqK-eI-oXr" id="qkM-6N-GBh"/>
+                        <segue destination="Cna-Pr-con" kind="showDetail" identifier="logout" id="rMc-j3-ovL"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="r39-44-89e" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="25" y="1307"/>
         </scene>
         <!--Register-->
         <scene sceneID="0qe-Oq-XIy">
@@ -251,7 +347,7 @@
                             </textField>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Student Number" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nGc-E7-ois">
                                 <rect key="frame" x="16" y="96" width="343" height="26.5"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="22"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -276,7 +372,7 @@
                             </textField>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Password" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Iql-vx-A6y">
                                 <rect key="frame" x="16" y="168.5" width="343" height="27"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="22"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -301,7 +397,7 @@
                             </textField>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Confirm Password" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="p7l-hZ-6eb">
                                 <rect key="frame" x="16" y="241.5" width="343" height="27"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="22"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -443,11 +539,10 @@ The picture should be taken </string>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="c4r-G3-bkt">
-                                <rect key="frame" x="16" y="557" width="343" height="50"/>
+                                <rect key="frame" x="16" y="563" width="343" height="44"/>
                                 <color key="backgroundColor" name="Brand Primary"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="50" id="QKa-y3-NRb"/>
-                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="44" id="flc-J6-H0U"/>
+                                    <constraint firstAttribute="height" constant="44" id="flc-J6-H0U"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
                                 <state key="normal" title="OPEN CAMERA">
@@ -459,7 +554,7 @@ The picture should be taken </string>
                                 </connections>
                             </button>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="746" image="vectorpaint" translatesAutoresizingMaskIntoConstraints="NO" id="5QO-e9-kbS">
-                                <rect key="frame" x="16" y="271" width="343" height="270"/>
+                                <rect key="frame" x="16" y="271" width="343" height="276"/>
                             </imageView>
                         </subviews>
                         <color key="backgroundColor" cocoaTouchSystemColor="viewFlipsideBackgroundColor"/>
@@ -479,7 +574,7 @@ The picture should be taken </string>
                     </view>
                     <connections>
                         <outlet property="imageView" destination="5QO-e9-kbS" id="Pkl-Km-YuT"/>
-                        <segue destination="BYZ-38-t0r" kind="showDetail" identifier="dashboard" id="pc8-gJ-Ake"/>
+                        <segue destination="cTa-le-T4J" kind="showDetail" identifier="dashboard" id="dQ7-LD-aqy"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="XkJ-a7-WHe" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -504,15 +599,56 @@ The picture should be taken </string>
             </objects>
             <point key="canvasLocation" x="-914.39999999999998" y="25.637181409295355"/>
         </scene>
+        <!--History-->
+        <scene sceneID="7vF-Gm-sKZ">
+            <objects>
+                <viewController id="qQa-b3-MLm" customClass="HistoryViewController" customModule="Lecture_Sign_In" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="A5W-uD-2g0">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" cocoaTouchSystemColor="viewFlipsideBackgroundColor"/>
+                        <viewLayoutGuide key="safeArea" id="uki-s5-jyA"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="History" image="combo_chart" id="n8Y-qi-h1X"/>
+                    <nil key="simulatedTopBarMetrics"/>
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics" barStyle="black"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="SnJ-dn-Pck" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3071" y="1308"/>
+        </scene>
+        <!--Timetable-->
+        <scene sceneID="afx-8I-K1Q">
+            <objects>
+                <viewController id="aTP-gW-f4u" customClass="TimetableViewController" customModule="Lecture_Sign_In" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="b1I-wi-Cqk">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" cocoaTouchSystemColor="viewFlipsideBackgroundColor"/>
+                        <viewLayoutGuide key="safeArea" id="AFC-6B-hXm"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Timetable" image="calendar" id="Z9T-qD-jGl"/>
+                    <nil key="simulatedTopBarMetrics"/>
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics" barStyle="black"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="p5H-F0-UKk" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2039" y="1308"/>
+        </scene>
     </scenes>
     <resources>
+        <image name="approval" width="30" height="30"/>
+        <image name="calendar" width="30" height="30"/>
+        <image name="combo_chart" width="30" height="30"/>
         <image name="logo_blue" width="1791" height="406"/>
+        <image name="services" width="30" height="30"/>
+        <image name="user_male" width="30" height="30"/>
         <image name="vectorpaint" width="364" height="364"/>
         <namedColor name="Brand Primary">
             <color red="0.12549019607843137" green="0.6588235294117647" blue="0.84705882352941175" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="5Xj-5x-Eci"/>
+        <segue reference="2QN-Rv-XZs"/>
     </inferredMetricsTieBreakers>
 </document>
