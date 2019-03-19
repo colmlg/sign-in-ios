@@ -43,6 +43,10 @@ class SetImageViewController: UIViewController {
         controller.addAction(yesAction)
         present(controller, animated: true)
     }
+    
+    override var preferredStatusBarStyle: UIStatusBarStyle {
+        return .lightContent
+    }
 }
 
 extension SetImageViewController: UIImagePickerControllerDelegate, UINavigationControllerDelegate {

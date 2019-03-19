@@ -14,7 +14,9 @@ class DashboardViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        beaconManager.delegate = self
+        viewModel.roomLabel.asObservable().bind(to: roomNumberLabel.rx.text).disposed(by: disposeBag)
+        viewModel.getRooms()
+        beaconManager.delegate = viewModel
         beaconManager.startMonitoring()
     }
     
@@ -52,21 +54,5 @@ extension DashboardViewController: UIImagePickerControllerDelegate, UINavigation
             })
         })
         
-    }
-}
-
-extension DashboardViewController: BeaconManagerDelegate {
-    func closestBeaconDidChange(beacon: CLBeacon?) {
-        guard let beacon = beacon else {
-            roomNumberLabel.text = "Room Number: "
-            return
-        }
-        
-        guard let roomNumber = Int("\(beacon.minor)") else {
-            return
-        }
-        
-        roomNumberLabel.text = "Room Number: \(roomNumber)"
-        viewModel.roomNumber.value = "\(roomNumber)"
     }
 }

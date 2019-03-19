@@ -16,6 +16,12 @@ class LoginViewController: UIViewController {
         passwordTextField.rx.text.orEmpty.bind(to: viewModel.password).disposed(by: disposeBag)
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        usernameTextField.becomeFirstResponder()
+        navigationController?.setNavigationBarHidden(true, animated: false)
+    }
+    
     @IBAction func loginButtonPressed(_ sender: Any) {
         viewModel.login {
             self.performSegue(withIdentifier: "login", sender: sender)
