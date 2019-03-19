@@ -14,7 +14,6 @@ class LoginViewController: UIViewController {
         super.viewDidLoad()
         usernameTextField.rx.text.orEmpty.bind(to: viewModel.username).disposed(by: disposeBag)
         passwordTextField.rx.text.orEmpty.bind(to: viewModel.password).disposed(by: disposeBag)
-        
     }
     
     override func viewWillAppear(_ animated: Bool) {
