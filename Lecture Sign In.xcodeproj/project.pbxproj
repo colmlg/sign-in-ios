@@ -15,6 +15,8 @@
 		D20421632215AE2F004A22FE /* AttendanceService.swift in Sources */ = {isa = PBXBuildFile; fileRef = D20421622215AE2F004A22FE /* AttendanceService.swift */; };
 		D20421652215AE4E004A22FE /* AttendanceRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = D20421642215AE4E004A22FE /* AttendanceRequest.swift */; };
 		D20421672215AEA5004A22FE /* ErrorHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = D20421662215AEA5004A22FE /* ErrorHandler.swift */; };
+		D213646C224132200096B55E /* RoomService.swift in Sources */ = {isa = PBXBuildFile; fileRef = D213646B224132200096B55E /* RoomService.swift */; };
+		D213646F2241323E0096B55E /* Room.swift in Sources */ = {isa = PBXBuildFile; fileRef = D213646E2241323E0096B55E /* Room.swift */; };
 		D21747F3217D1F2F000FD7B8 /* UserService.swift in Sources */ = {isa = PBXBuildFile; fileRef = D21747F2217D1F2F000FD7B8 /* UserService.swift */; };
 		D21747F5217D1F4E000FD7B8 /* ImageRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = D21747F4217D1F4E000FD7B8 /* ImageRequest.swift */; };
 		D21747F7217D1F81000FD7B8 /* EmptyResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = D21747F6217D1F81000FD7B8 /* EmptyResponse.swift */; };
@@ -78,6 +80,8 @@
 		D20421622215AE2F004A22FE /* AttendanceService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AttendanceService.swift; sourceTree = "<group>"; };
 		D20421642215AE4E004A22FE /* AttendanceRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AttendanceRequest.swift; sourceTree = "<group>"; };
 		D20421662215AEA5004A22FE /* ErrorHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorHandler.swift; sourceTree = "<group>"; };
+		D213646B224132200096B55E /* RoomService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoomService.swift; sourceTree = "<group>"; };
+		D213646E2241323E0096B55E /* Room.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Room.swift; sourceTree = "<group>"; };
 		D21747F2217D1F2F000FD7B8 /* UserService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserService.swift; sourceTree = "<group>"; };
 		D21747F4217D1F4E000FD7B8 /* ImageRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageRequest.swift; sourceTree = "<group>"; };
 		D21747F6217D1F81000FD7B8 /* EmptyResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmptyResponse.swift; sourceTree = "<group>"; };
@@ -203,6 +207,15 @@
 			path = Attendance;
 			sourceTree = "<group>";
 		};
+		D213646D224132250096B55E /* Room */ = {
+			isa = PBXGroup;
+			children = (
+				D213646B224132200096B55E /* RoomService.swift */,
+				D213646E2241323E0096B55E /* Room.swift */,
+			);
+			path = Room;
+			sourceTree = "<group>";
+		};
 		D21747F1217D1F1C000FD7B8 /* User */ = {
 			isa = PBXGroup;
 			children = (
@@ -298,6 +311,7 @@
 		D2AFD4272178EDA000B2B917 /* Network */ = {
 			isa = PBXGroup;
 			children = (
+				D213646D224132250096B55E /* Room */,
 				D20421612215AE20004A22FE /* Attendance */,
 				D21747F1217D1F1C000FD7B8 /* User */,
 				846732CA217B978400C68C0E /* Login */,
@@ -509,6 +523,7 @@
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-Lecture Sign In/Pods-Lecture Sign In-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/BRYXBanner/BRYXBanner.framework",
 				"${BUILT_PRODUCTS_DIR}/KeychainSwift/KeychainSwift.framework",
 				"${BUILT_PRODUCTS_DIR}/PKHUD/PKHUD.framework",
 				"${BUILT_PRODUCTS_DIR}/Realm/Realm.framework",
@@ -519,6 +534,7 @@
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/BRYXBanner.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/KeychainSwift.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/PKHUD.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Realm.framework",
@@ -563,12 +579,14 @@
 				D22841A122034D4800CAB864 /* SetImageViewModel.swift in Sources */,
 				D20421652215AE4E004A22FE /* AttendanceRequest.swift in Sources */,
 				D25271D6216FB85700DDC167 /* BaseAPIService.swift in Sources */,
+				D213646C224132200096B55E /* RoomService.swift in Sources */,
 				D2C8B8732198DACE0029CBB6 /* LoginViewController.swift in Sources */,
 				D228419F22034D2100CAB864 /* SetImageViewController.swift in Sources */,
 				846732CE217B97C700C68C0E /* LoginRequest.swift in Sources */,
 				846732D0217B9A3F00C68C0E /* DashboardViewModel.swift in Sources */,
 				D274FE30216A83C10096D02D /* AppDelegate.swift in Sources */,
 				D20421632215AE2F004A22FE /* AttendanceService.swift in Sources */,
+				D213646F2241323E0096B55E /* Room.swift in Sources */,
 				D2C8B8762198DCD60029CBB6 /* LoginViewModel.swift in Sources */,
 				D25C879621F16BF00088A4F0 /* RegisterViewController.swift in Sources */,
 				846732CC217B979E00C68C0E /* LoginService.swift in Sources */,

@@ -18,6 +18,7 @@ class LoginViewController: UIViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
+        usernameTextField.becomeFirstResponder()
         navigationController?.setNavigationBarHidden(true, animated: false)
     }
     
@@ -25,9 +26,5 @@ class LoginViewController: UIViewController {
         viewModel.login {
             self.performSegue(withIdentifier: "login", sender: sender)
         }
-    }
-    
-    override var preferredStatusBarStyle: UIStatusBarStyle {
-        return .lightContent
     }
 }
