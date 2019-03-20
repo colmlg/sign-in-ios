@@ -148,6 +148,7 @@
                         <outlet property="passwordTextField" destination="fen-ye-pa2" id="uo0-Tf-pFq"/>
                         <outlet property="usernameTextField" destination="xlx-my-QUf" id="0K8-bG-dPv"/>
                         <segue destination="cTa-le-T4J" kind="showDetail" identifier="login" id="2QN-Rv-XZs"/>
+                        <segue destination="sVF-gN-eYd" kind="showDetail" identifier="setImage" id="qCM-8a-TFi"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4FR-1u-mly" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -251,13 +252,13 @@
                                     <constraint firstAttribute="height" constant="90" id="i1g-ph-FCx"/>
                                 </constraints>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Student Number" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uqB-ll-Bao">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Student Number" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uqB-ll-Bao">
                                 <rect key="frame" x="114" y="36" width="253" height="27"/>
                                 <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="22"/>
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="15148823" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bqK-eI-oXr">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="15148823" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bqK-eI-oXr">
                                 <rect key="frame" x="114" y="71" width="253" height="24"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -649,6 +650,7 @@ The picture should be taken </string>
         </namedColor>
     </resources>
     <inferredMetricsTieBreakers>
+        <segue reference="qCM-8a-TFi"/>
         <segue reference="2QN-Rv-XZs"/>
     </inferredMetricsTieBreakers>
 </document>

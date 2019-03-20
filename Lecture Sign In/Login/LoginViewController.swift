@@ -30,8 +30,9 @@ class LoginViewController: UIViewController {
     }
     
     @IBAction func loginButtonPressed(_ sender: Any) {
-        viewModel.login {
-            self.performSegue(withIdentifier: "login", sender: sender)
+        viewModel.login { isImageSet in
+            let segueId = isImageSet ? "login" : "setImage"
+            self.performSegue(withIdentifier: segueId, sender: sender)
         }
     }
 }

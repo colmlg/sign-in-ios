@@ -1,3 +1,4 @@
-class TokenResponse: Codable {
-    var token: String
+struct TokenResponse: Codable {
+    let token: String
+    let imageSet: Bool?
 }
