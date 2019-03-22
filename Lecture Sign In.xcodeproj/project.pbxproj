@@ -24,6 +24,12 @@
 		D228419D2203443700CAB864 /* StringExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = D228419C2203443700CAB864 /* StringExtensions.swift */; };
 		D228419F22034D2100CAB864 /* SetImageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D228419E22034D2100CAB864 /* SetImageViewController.swift */; };
 		D22841A122034D4800CAB864 /* SetImageViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D22841A022034D4800CAB864 /* SetImageViewModel.swift */; };
+		D22CADE722453D4D00A378A2 /* Module.swift in Sources */ = {isa = PBXBuildFile; fileRef = D22CADE622453D4D00A378A2 /* Module.swift */; };
+		D22CADEA22453D7700A378A2 /* ModuleService.swift in Sources */ = {isa = PBXBuildFile; fileRef = D22CADE922453D7700A378A2 /* ModuleService.swift */; };
+		D22EA68322454915003A7B24 /* MoudleDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D22EA68222454915003A7B24 /* MoudleDetailsViewController.swift */; };
+		D22EA68522454C02003A7B24 /* ModuleDetailsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D22EA68422454C02003A7B24 /* ModuleDetailsViewModel.swift */; };
+		D22EA68722454D17003A7B24 /* Lesson.swift in Sources */ = {isa = PBXBuildFile; fileRef = D22EA68622454D17003A7B24 /* Lesson.swift */; };
+		D22EA68922454DC2003A7B24 /* GetModuleResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = D22EA68822454DC2003A7B24 /* GetModuleResponse.swift */; };
 		D23A255C216E93DE00ACF98D /* Repository.swift in Sources */ = {isa = PBXBuildFile; fileRef = D23A255B216E93DE00ACF98D /* Repository.swift */; };
 		D25271D4216FB4B600DDC167 /* BeaconManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D25271D3216FB4B600DDC167 /* BeaconManager.swift */; };
 		D25271D6216FB85700DDC167 /* BaseAPIService.swift in Sources */ = {isa = PBXBuildFile; fileRef = D25271D5216FB85700DDC167 /* BaseAPIService.swift */; };
@@ -96,6 +102,12 @@
 		D228419C2203443700CAB864 /* StringExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringExtensions.swift; sourceTree = "<group>"; };
 		D228419E22034D2100CAB864 /* SetImageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetImageViewController.swift; sourceTree = "<group>"; };
 		D22841A022034D4800CAB864 /* SetImageViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetImageViewModel.swift; sourceTree = "<group>"; };
+		D22CADE622453D4D00A378A2 /* Module.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Module.swift; sourceTree = "<group>"; };
+		D22CADE922453D7700A378A2 /* ModuleService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModuleService.swift; sourceTree = "<group>"; };
+		D22EA68222454915003A7B24 /* MoudleDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoudleDetailsViewController.swift; sourceTree = "<group>"; };
+		D22EA68422454C02003A7B24 /* ModuleDetailsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModuleDetailsViewModel.swift; sourceTree = "<group>"; };
+		D22EA68622454D17003A7B24 /* Lesson.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Lesson.swift; sourceTree = "<group>"; };
+		D22EA68822454DC2003A7B24 /* GetModuleResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetModuleResponse.swift; sourceTree = "<group>"; };
 		D23A255B216E93DE00ACF98D /* Repository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Repository.swift; sourceTree = "<group>"; };
 		D25271D3216FB4B600DDC167 /* BeaconManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BeaconManager.swift; sourceTree = "<group>"; };
 		D25271D5216FB85700DDC167 /* BaseAPIService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseAPIService.swift; sourceTree = "<group>"; };
@@ -241,6 +253,26 @@
 			path = "New Group";
 			sourceTree = "<group>";
 		};
+		D22CADE822453D6900A378A2 /* Module */ = {
+			isa = PBXGroup;
+			children = (
+				D22CADE622453D4D00A378A2 /* Module.swift */,
+				D22CADE922453D7700A378A2 /* ModuleService.swift */,
+				D22EA68822454DC2003A7B24 /* GetModuleResponse.swift */,
+				D22EA68622454D17003A7B24 /* Lesson.swift */,
+			);
+			path = Module;
+			sourceTree = "<group>";
+		};
+		D22EA68122454901003A7B24 /* Module Details */ = {
+			isa = PBXGroup;
+			children = (
+				D22EA68222454915003A7B24 /* MoudleDetailsViewController.swift */,
+				D22EA68422454C02003A7B24 /* ModuleDetailsViewModel.swift */,
+			);
+			path = "Module Details";
+			sourceTree = "<group>";
+		};
 		D23A2558216E933B00ACF98D /* Data Layer */ = {
 			isa = PBXGroup;
 			children = (
@@ -315,6 +347,7 @@
 		D274FE2E216A83C10096D02D /* Lecture Sign In */ = {
 			isa = PBXGroup;
 			children = (
+				D22EA68122454901003A7B24 /* Module Details */,
 				D274C7152241814B00FDCFB7 /* History */,
 				D274C7142241814300FDCFB7 /* Timetable */,
 				D274C711224178D800FDCFB7 /* Account */,
@@ -357,6 +390,7 @@
 		D2AFD4272178EDA000B2B917 /* Network */ = {
 			isa = PBXGroup;
 			children = (
+				D22CADE822453D6900A378A2 /* Module */,
 				D213646D224132250096B55E /* Room */,
 				D20421612215AE20004A22FE /* Attendance */,
 				D21747F1217D1F1C000FD7B8 /* User */,
@@ -623,13 +657,17 @@
 				D20421672215AEA5004A22FE /* ErrorHandler.swift in Sources */,
 				D2C8B86F2198D9490029CBB6 /* EncodableExtensions.swift in Sources */,
 				D25271D4216FB4B600DDC167 /* BeaconManager.swift in Sources */,
+				D22EA68522454C02003A7B24 /* ModuleDetailsViewModel.swift in Sources */,
+				D22CADEA22453D7700A378A2 /* ModuleService.swift in Sources */,
 				D22841A122034D4800CAB864 /* SetImageViewModel.swift in Sources */,
 				D20421652215AE4E004A22FE /* AttendanceRequest.swift in Sources */,
 				D25271D6216FB85700DDC167 /* BaseAPIService.swift in Sources */,
 				D274C710224178CE00FDCFB7 /* AccountViewController.swift in Sources */,
 				D213646C224132200096B55E /* RoomService.swift in Sources */,
+				D22CADE722453D4D00A378A2 /* Module.swift in Sources */,
 				D2C8B8732198DACE0029CBB6 /* LoginViewController.swift in Sources */,
 				D274C7132241799400FDCFB7 /* AccountViewModel.swift in Sources */,
+				D22EA68322454915003A7B24 /* MoudleDetailsViewController.swift in Sources */,
 				D228419F22034D2100CAB864 /* SetImageViewController.swift in Sources */,
 				846732CE217B97C700C68C0E /* LoginRequest.swift in Sources */,
 				D274C7172241817000FDCFB7 /* TimetableViewController.swift in Sources */,
@@ -646,8 +684,10 @@
 				D274C7192241818900FDCFB7 /* TimetableViewModel.swift in Sources */,
 				D228419D2203443700CAB864 /* StringExtensions.swift in Sources */,
 				D2AFD4242178E8D800B2B917 /* TokenResponse.swift in Sources */,
+				D22EA68922454DC2003A7B24 /* GetModuleResponse.swift in Sources */,
 				D21747F7217D1F81000FD7B8 /* EmptyResponse.swift in Sources */,
 				8474FE122184ADBE004023E3 /* CompareFaceResponse.swift in Sources */,
+				D22EA68722454D17003A7B24 /* Lesson.swift in Sources */,
 				D25C879821F261D10088A4F0 /* RegisterViewModel.swift in Sources */,
 				D21747F5217D1F4E000FD7B8 /* ImageRequest.swift in Sources */,
 				D21747F3217D1F2F000FD7B8 /* UserService.swift in Sources */,

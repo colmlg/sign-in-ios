@@ -228,8 +228,8 @@
                     <connections>
                         <segue destination="BYZ-38-t0r" kind="relationship" relationship="viewControllers" id="bed-4b-vmU"/>
                         <segue destination="aTP-gW-f4u" kind="relationship" relationship="viewControllers" id="ENg-Eu-5sq"/>
-                        <segue destination="qQa-b3-MLm" kind="relationship" relationship="viewControllers" id="QxH-0X-O3Y"/>
                         <segue destination="Xht-jA-Wqy" kind="relationship" relationship="viewControllers" id="yYe-Lr-0IN"/>
+                        <segue destination="yNi-WE-H5e" kind="relationship" relationship="viewControllers" id="4g7-QL-QvZ"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="nM3-Re-Mza" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -600,24 +600,6 @@ The picture should be taken </string>
             </objects>
             <point key="canvasLocation" x="-914.39999999999998" y="25.637181409295355"/>
         </scene>
-        <!--History-->
-        <scene sceneID="7vF-Gm-sKZ">
-            <objects>
-                <viewController id="qQa-b3-MLm" customClass="HistoryViewController" customModule="Lecture_Sign_In" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="A5W-uD-2g0">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" cocoaTouchSystemColor="viewFlipsideBackgroundColor"/>
-                        <viewLayoutGuide key="safeArea" id="uki-s5-jyA"/>
-                    </view>
-                    <tabBarItem key="tabBarItem" title="History" image="combo_chart" id="n8Y-qi-h1X"/>
-                    <nil key="simulatedTopBarMetrics"/>
-                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics" barStyle="black"/>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="SnJ-dn-Pck" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="3071" y="1308"/>
-        </scene>
         <!--Timetable-->
         <scene sceneID="afx-8I-K1Q">
             <objects>
@@ -635,6 +617,84 @@ The picture should be taken </string>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="p5H-F0-UKk" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2039" y="1308"/>
+        </scene>
+        <!--My Modules-->
+        <scene sceneID="5rc-xD-Duu">
+            <objects>
+                <tableViewController title="My Modules" id="YiA-99-D7e" customClass="HistoryViewController" customModule="Lecture_Sign_In" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="cIB-fM-0HK">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="603"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" cocoaTouchSystemColor="viewFlipsideBackgroundColor"/>
+                        <color key="separatorColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="sectionIndexColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="sectionIndexBackgroundColor" cocoaTouchSystemColor="viewFlipsideBackgroundColor"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="HistoryTableViewCellIdentifier" rowHeight="71" id="KRt-4n-Nsb">
+                                <rect key="frame" x="0.0" y="28" width="375" height="71"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="KRt-4n-Nsb" id="9DX-k3-qiQ">
+                                    <rect key="frame" x="0.0" y="0.0" width="341" height="71"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <color key="backgroundColor" cocoaTouchSystemColor="viewFlipsideBackgroundColor"/>
+                                </tableViewCellContentView>
+                                <color key="backgroundColor" cocoaTouchSystemColor="viewFlipsideBackgroundColor"/>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="YiA-99-D7e" id="xyv-1P-7fz"/>
+                            <outlet property="delegate" destination="YiA-99-D7e" id="Qnv-TV-S4W"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" id="yAL-fY-iux"/>
+                    <connections>
+                        <segue destination="7cn-LI-gLU" kind="show" identifier="goToModuleDetails" id="FXO-aP-50D"/>
+                    </connections>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Icn-06-Dus" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3836" y="1306.5967016491754"/>
+        </scene>
+        <!--Module Details View Controller-->
+        <scene sceneID="3C6-ZL-Bda">
+            <objects>
+                <viewController id="7cn-LI-gLU" customClass="ModuleDetailsViewController" customModule="Lecture_Sign_In" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="EC8-W6-Gj6">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="603"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" cocoaTouchSystemColor="viewFlipsideBackgroundColor"/>
+                        <viewLayoutGuide key="safeArea" id="pT9-GT-EbY"/>
+                    </view>
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" barStyle="black" translucent="NO" prompted="NO"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="FzF-Xy-zmf" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4743" y="1307"/>
+        </scene>
+        <!--History-->
+        <scene sceneID="ZFp-9Q-D7s">
+            <objects>
+                <navigationController id="yNi-WE-H5e" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="History" image="combo_chart" id="3Lo-30-bI9"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" barStyle="black" translucent="NO" id="ikI-h9-MqK">
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="barTintColor" cocoaTouchSystemColor="viewFlipsideBackgroundColor"/>
+                        <textAttributes key="titleTextAttributes">
+                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </textAttributes>
+                        <textAttributes key="largeTitleTextAttributes">
+                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </textAttributes>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="YiA-99-D7e" kind="relationship" relationship="rootViewController" id="pOA-5M-jnw"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="eAn-hb-3WV" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2958" y="1307"/>
         </scene>
     </scenes>
     <resources>

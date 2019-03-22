@@ -4,7 +4,7 @@ import RxSwift
 import KeychainSwift
 
 class BaseAPIService {
-    private let baseUrl = "http://2c504365.ngrok.io"
+    private let baseUrl = "http://67efa73a.ngrok.io"
     
     func post<T: Codable>(model: Codable, endPoint: String) -> Observable<T> {
        return makeRequest(endPoint: endPoint, method: .post, body: model.toData())
