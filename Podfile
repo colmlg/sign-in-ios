@@ -14,6 +14,8 @@ target 'Lecture Sign In' do
     pod 'KeychainSwift'
     pod 'PKHUD'
     pod 'BRYXBanner'
+    pod 'SwiftDate'
+    #pod 'UICircularProgressRing'
 
   target 'Lecture Sign InTests' do
     inherit! :search_paths

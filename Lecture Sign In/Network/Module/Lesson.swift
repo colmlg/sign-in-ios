@@ -1,5 +1,5 @@
 import Foundation
-class Lesson: Codable {
+struct Lesson: Codable {
     let studentsAttended: [String]
     let type: String
     let moduleId: String
