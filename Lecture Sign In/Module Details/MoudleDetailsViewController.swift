@@ -1,19 +1,54 @@
 import Foundation
 import UIKit
 import RxSwift
+import PKHUD
+import UICircularProgressRing
 
 class ModuleDetailsViewController: UIViewController {
+    @IBOutlet weak var overallRing: UICircularProgressRing!
+    @IBOutlet weak var lecturesRing: UICircularProgressRing!
+    @IBOutlet weak var labsRing: UICircularProgressRing!
+    @IBOutlet weak var tutorialsRing: UICircularProgressRing!
     
-    let viewModel = ModuleDetailsViewModel()
+    private let viewModel = ModuleDetailsViewModel()
+    private let disposeBag = DisposeBag()
     var moduleId: String!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         navigationItem.title = moduleId
+        initObservers()
+        HUD.show(.progress)
         viewModel.getModuleDetails(id: moduleId)
     }
     
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(animated)
+    private func initObservers() {
+        viewModel.overallAttendance.asObservable().subscribe(onNext: { overall in
+            self.set(value: overall, on: self.overallRing)
+        }).disposed(by: disposeBag)
+        
+        viewModel.lectureAttendance.asObservable().subscribe(onNext: { lecture in
+            self.set(value: lecture, on: self.lecturesRing)
+        }).disposed(by: disposeBag)
+        
+        viewModel.labAttendance.asObservable().subscribe(onNext: { lab in
+            self.set(value: lab, on: self.labsRing)
+        }).disposed(by: disposeBag)
+        
+        viewModel.tutorialAttendance.asObservable().subscribe(onNext: { tutorial in
+            self.set(value: tutorial, on: self.tutorialsRing)
+        }).disposed(by: disposeBag)
+    }
+    
+    private func set(value: Double, on progressRing: UICircularProgressRing) {
+        HUD.hide()
+        progressRing.startProgress(to: CGFloat(value), duration: 1.0)
+        if value >= 75 {
+            progressRing.innerRingColor = UIColor(named: "Success")!
+        } else if value >= 50 {
+            progressRing.innerRingColor = UIColor(named: "Warning")!
+        } else {
+            progressRing.innerRingColor = UIColor(named: "Danger")!
+        }
     }
 }

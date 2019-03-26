@@ -31,7 +31,7 @@ class DashboardViewModel {
         
         let resizedImage = image.resizeImage(500.0, opaque: true)
         
-        guard let imageData = UIImageJPEGRepresentation(resizedImage, 0.5) else {
+        guard let imageData = resizedImage.jpegData(compressionQuality: 0.5) else {
             return
         }
         HUD.show(.progress)

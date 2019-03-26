@@ -5,6 +5,6 @@ struct Lesson: Codable {
     let moduleId: String
     let startTime: String
     let endTime: String
-    let date: Date
+    let date: String
     let roomNumber: String
 }

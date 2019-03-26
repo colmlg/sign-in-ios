@@ -3,4 +3,6 @@ excluded:
 disabled_rules:
 - trailing_whitespace
 line_length: 150
-
+identifier_name:
+  excluded: # excluded via string array
+    - id
