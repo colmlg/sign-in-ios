@@ -13,8 +13,10 @@ If users sign up using their University of Limerick ID number their timetable wi
 
 
 ## To Run
-
+Ensure the [bluetooth beacon](https://github.com/colmlg/fyp-raspberry-pi-script) is broadcasting a room number.  
 Open the workspace in XCode and build the project.  
+
+
 Edit `Network/BaseAPIService.baseUrl` to change the address of the backend server.
 
 
