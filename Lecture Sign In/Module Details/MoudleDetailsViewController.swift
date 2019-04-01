@@ -9,6 +9,9 @@ class ModuleDetailsViewController: UIViewController {
     @IBOutlet weak var lecturesRing: UICircularProgressRing!
     @IBOutlet weak var labsRing: UICircularProgressRing!
     @IBOutlet weak var tutorialsRing: UICircularProgressRing!
+    @IBOutlet weak var lecturesLabel: UILabel!
+    @IBOutlet weak var labsLabel: UILabel!
+    @IBOutlet weak var tutorialsLabel: UILabel!
     
     private let viewModel = ModuleDetailsViewModel()
     private let disposeBag = DisposeBag()
@@ -18,8 +21,20 @@ class ModuleDetailsViewController: UIViewController {
         super.viewDidLoad()
         navigationItem.title = moduleId
         initObservers()
+        initBindings()
         HUD.show(.progress)
         viewModel.getModuleDetails(id: moduleId)
+    }
+    
+    private func initBindings() {
+        viewModel.hideLecs.asObservable().bind(to: lecturesRing.rx.isHidden).disposed(by: disposeBag)
+        viewModel.hideLecs.asObservable().bind(to: lecturesLabel.rx.isHidden).disposed(by: disposeBag)
+        
+        viewModel.hideTuts.asObservable().bind(to: tutorialsRing.rx.isHidden).disposed(by: disposeBag)
+        viewModel.hideTuts.asObservable().bind(to: tutorialsLabel.rx.isHidden).disposed(by: disposeBag)
+        
+        viewModel.hideLabs.asObservable().bind(to: labsRing.rx.isHidden).disposed(by: disposeBag)
+        viewModel.hideLabs.asObservable().bind(to: labsLabel.rx.isHidden).disposed(by: disposeBag)
     }
     
     private func initObservers() {

@@ -228,7 +228,6 @@
                     <connections>
                         <segue destination="BYZ-38-t0r" kind="relationship" relationship="viewControllers" id="bed-4b-vmU"/>
                         <segue destination="yNi-WE-H5e" kind="relationship" relationship="viewControllers" id="4g7-QL-QvZ"/>
-                        <segue destination="aTP-gW-f4u" kind="relationship" relationship="viewControllers" id="ENg-Eu-5sq"/>
                         <segue destination="Xht-jA-Wqy" kind="relationship" relationship="viewControllers" id="yYe-Lr-0IN"/>
                     </connections>
                 </tabBarController>
@@ -600,24 +599,6 @@ The picture should be taken </string>
             </objects>
             <point key="canvasLocation" x="-914.39999999999998" y="25.637181409295355"/>
         </scene>
-        <!--Timetable-->
-        <scene sceneID="afx-8I-K1Q">
-            <objects>
-                <viewController id="aTP-gW-f4u" customClass="TimetableViewController" customModule="Lecture_Sign_In" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="b1I-wi-Cqk">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" cocoaTouchSystemColor="viewFlipsideBackgroundColor"/>
-                        <viewLayoutGuide key="safeArea" id="AFC-6B-hXm"/>
-                    </view>
-                    <tabBarItem key="tabBarItem" title="Timetable" image="calendar" id="Z9T-qD-jGl"/>
-                    <nil key="simulatedTopBarMetrics"/>
-                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics" barStyle="black"/>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="p5H-F0-UKk" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="2039" y="1308"/>
-        </scene>
         <!--My Modules-->
         <scene sceneID="5rc-xD-Duu">
             <objects>
@@ -897,9 +878,12 @@ The picture should be taken </string>
                     </view>
                     <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" barStyle="black" translucent="NO" prompted="NO"/>
                     <connections>
+                        <outlet property="labsLabel" destination="f2Y-vs-8m2" id="wyQ-nA-ObH"/>
                         <outlet property="labsRing" destination="9Ku-K6-jPR" id="8dn-ZA-mZA"/>
+                        <outlet property="lecturesLabel" destination="fRe-mo-OlE" id="snx-Sp-8aw"/>
                         <outlet property="lecturesRing" destination="kvI-c3-F5y" id="LzN-Ke-48x"/>
                         <outlet property="overallRing" destination="U5E-Cj-2Wy" id="d5i-ca-cof"/>
+                        <outlet property="tutorialsLabel" destination="dHo-bn-gso" id="Gq4-rS-UCf"/>
                         <outlet property="tutorialsRing" destination="jMn-ut-WKA" id="pUL-8l-ae1"/>
                     </connections>
                 </viewController>
@@ -935,7 +919,6 @@ The picture should be taken </string>
     </scenes>
     <resources>
         <image name="approval" width="30" height="30"/>
-        <image name="calendar" width="30" height="30"/>
         <image name="combo_chart" width="30" height="30"/>
         <image name="logo_blue" width="1791" height="406"/>
         <image name="services" width="30" height="30"/>
