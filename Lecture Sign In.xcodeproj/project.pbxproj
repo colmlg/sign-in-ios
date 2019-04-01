@@ -24,6 +24,12 @@
 		D228419D2203443700CAB864 /* StringExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = D228419C2203443700CAB864 /* StringExtensions.swift */; };
 		D228419F22034D2100CAB864 /* SetImageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D228419E22034D2100CAB864 /* SetImageViewController.swift */; };
 		D22841A122034D4800CAB864 /* SetImageViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D22841A022034D4800CAB864 /* SetImageViewModel.swift */; };
+		D22CADE722453D4D00A378A2 /* Module.swift in Sources */ = {isa = PBXBuildFile; fileRef = D22CADE622453D4D00A378A2 /* Module.swift */; };
+		D22CADEA22453D7700A378A2 /* ModuleService.swift in Sources */ = {isa = PBXBuildFile; fileRef = D22CADE922453D7700A378A2 /* ModuleService.swift */; };
+		D22EA68322454915003A7B24 /* MoudleDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D22EA68222454915003A7B24 /* MoudleDetailsViewController.swift */; };
+		D22EA68522454C02003A7B24 /* ModuleDetailsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D22EA68422454C02003A7B24 /* ModuleDetailsViewModel.swift */; };
+		D22EA68722454D17003A7B24 /* Lesson.swift in Sources */ = {isa = PBXBuildFile; fileRef = D22EA68622454D17003A7B24 /* Lesson.swift */; };
+		D22EA68922454DC2003A7B24 /* GetModuleResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = D22EA68822454DC2003A7B24 /* GetModuleResponse.swift */; };
 		D23A255C216E93DE00ACF98D /* Repository.swift in Sources */ = {isa = PBXBuildFile; fileRef = D23A255B216E93DE00ACF98D /* Repository.swift */; };
 		D25271D4216FB4B600DDC167 /* BeaconManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D25271D3216FB4B600DDC167 /* BeaconManager.swift */; };
 		D25271D6216FB85700DDC167 /* BaseAPIService.swift in Sources */ = {isa = PBXBuildFile; fileRef = D25271D5216FB85700DDC167 /* BaseAPIService.swift */; };
@@ -31,8 +37,6 @@
 		D25C879821F261D10088A4F0 /* RegisterViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D25C879721F261D10088A4F0 /* RegisterViewModel.swift */; };
 		D274C710224178CE00FDCFB7 /* AccountViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D274C70F224178CE00FDCFB7 /* AccountViewController.swift */; };
 		D274C7132241799400FDCFB7 /* AccountViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D274C7122241799400FDCFB7 /* AccountViewModel.swift */; };
-		D274C7172241817000FDCFB7 /* TimetableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D274C7162241817000FDCFB7 /* TimetableViewController.swift */; };
-		D274C7192241818900FDCFB7 /* TimetableViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D274C7182241818900FDCFB7 /* TimetableViewModel.swift */; };
 		D274C71E224181F300FDCFB7 /* HistoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D274C71D224181F300FDCFB7 /* HistoryViewController.swift */; };
 		D274C720224181FB00FDCFB7 /* HistoryViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D274C71F224181FB00FDCFB7 /* HistoryViewModel.swift */; };
 		D274C722224182C200FDCFB7 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = D274C721224182C200FDCFB7 /* User.swift */; };
@@ -96,6 +100,12 @@
 		D228419C2203443700CAB864 /* StringExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringExtensions.swift; sourceTree = "<group>"; };
 		D228419E22034D2100CAB864 /* SetImageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetImageViewController.swift; sourceTree = "<group>"; };
 		D22841A022034D4800CAB864 /* SetImageViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetImageViewModel.swift; sourceTree = "<group>"; };
+		D22CADE622453D4D00A378A2 /* Module.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Module.swift; sourceTree = "<group>"; };
+		D22CADE922453D7700A378A2 /* ModuleService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModuleService.swift; sourceTree = "<group>"; };
+		D22EA68222454915003A7B24 /* MoudleDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoudleDetailsViewController.swift; sourceTree = "<group>"; };
+		D22EA68422454C02003A7B24 /* ModuleDetailsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModuleDetailsViewModel.swift; sourceTree = "<group>"; };
+		D22EA68622454D17003A7B24 /* Lesson.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Lesson.swift; sourceTree = "<group>"; };
+		D22EA68822454DC2003A7B24 /* GetModuleResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetModuleResponse.swift; sourceTree = "<group>"; };
 		D23A255B216E93DE00ACF98D /* Repository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Repository.swift; sourceTree = "<group>"; };
 		D25271D3216FB4B600DDC167 /* BeaconManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BeaconManager.swift; sourceTree = "<group>"; };
 		D25271D5216FB85700DDC167 /* BaseAPIService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseAPIService.swift; sourceTree = "<group>"; };
@@ -103,8 +113,6 @@
 		D25C879721F261D10088A4F0 /* RegisterViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewModel.swift; sourceTree = "<group>"; };
 		D274C70F224178CE00FDCFB7 /* AccountViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountViewController.swift; sourceTree = "<group>"; };
 		D274C7122241799400FDCFB7 /* AccountViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountViewModel.swift; sourceTree = "<group>"; };
-		D274C7162241817000FDCFB7 /* TimetableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimetableViewController.swift; sourceTree = "<group>"; };
-		D274C7182241818900FDCFB7 /* TimetableViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimetableViewModel.swift; sourceTree = "<group>"; };
 		D274C71D224181F300FDCFB7 /* HistoryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryViewController.swift; sourceTree = "<group>"; };
 		D274C71F224181FB00FDCFB7 /* HistoryViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryViewModel.swift; sourceTree = "<group>"; };
 		D274C721224182C200FDCFB7 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
@@ -241,6 +249,35 @@
 			path = "New Group";
 			sourceTree = "<group>";
 		};
+		D22CADE822453D6900A378A2 /* Module */ = {
+			isa = PBXGroup;
+			children = (
+				D22CADE622453D4D00A378A2 /* Module.swift */,
+				D22CADE922453D7700A378A2 /* ModuleService.swift */,
+				D22EA68822454DC2003A7B24 /* GetModuleResponse.swift */,
+				D22EA68622454D17003A7B24 /* Lesson.swift */,
+			);
+			path = Module;
+			sourceTree = "<group>";
+		};
+		D22EA68122454901003A7B24 /* Module Details */ = {
+			isa = PBXGroup;
+			children = (
+				D22EA68222454915003A7B24 /* MoudleDetailsViewController.swift */,
+				D22EA68422454C02003A7B24 /* ModuleDetailsViewModel.swift */,
+			);
+			path = "Module Details";
+			sourceTree = "<group>";
+		};
+		D2310E41224BBFAE0070FDBB /* Account */ = {
+			isa = PBXGroup;
+			children = (
+				D274C70F224178CE00FDCFB7 /* AccountViewController.swift */,
+				D274C7122241799400FDCFB7 /* AccountViewModel.swift */,
+			);
+			path = Account;
+			sourceTree = "<group>";
+		};
 		D23A2558216E933B00ACF98D /* Data Layer */ = {
 			isa = PBXGroup;
 			children = (
@@ -259,25 +296,6 @@
 				D22841A022034D4800CAB864 /* SetImageViewModel.swift */,
 			);
 			path = Register;
-			sourceTree = "<group>";
-		};
-		D274C711224178D800FDCFB7 /* Account */ = {
-			isa = PBXGroup;
-			children = (
-				D274C70F224178CE00FDCFB7 /* AccountViewController.swift */,
-				D274C7122241799400FDCFB7 /* AccountViewModel.swift */,
-			);
-			name = Account;
-			path = ..;
-			sourceTree = "<group>";
-		};
-		D274C7142241814300FDCFB7 /* Timetable */ = {
-			isa = PBXGroup;
-			children = (
-				D274C7162241817000FDCFB7 /* TimetableViewController.swift */,
-				D274C7182241818900FDCFB7 /* TimetableViewModel.swift */,
-			);
-			path = Timetable;
 			sourceTree = "<group>";
 		};
 		D274C7152241814B00FDCFB7 /* History */ = {
@@ -315,9 +333,9 @@
 		D274FE2E216A83C10096D02D /* Lecture Sign In */ = {
 			isa = PBXGroup;
 			children = (
+				D2310E41224BBFAE0070FDBB /* Account */,
+				D22EA68122454901003A7B24 /* Module Details */,
 				D274C7152241814B00FDCFB7 /* History */,
-				D274C7142241814300FDCFB7 /* Timetable */,
-				D274C711224178D800FDCFB7 /* Account */,
 				846732D4217BA00900C68C0E /* Dashboard */,
 				D23A2558216E933B00ACF98D /* Data Layer */,
 				D2C8B8702198DAB10029CBB6 /* Login */,
@@ -357,6 +375,7 @@
 		D2AFD4272178EDA000B2B917 /* Network */ = {
 			isa = PBXGroup;
 			children = (
+				D22CADE822453D6900A378A2 /* Module */,
 				D213646D224132250096B55E /* Room */,
 				D20421612215AE20004A22FE /* Attendance */,
 				D21747F1217D1F1C000FD7B8 /* User */,
@@ -456,10 +475,12 @@
 					};
 					D274FE3F216A83C20096D02D = {
 						CreatedOnToolsVersion = 9.4.1;
+						LastSwiftMigration = 1010;
 						TestTargetID = D274FE2B216A83C10096D02D;
 					};
 					D274FE4A216A83C20096D02D = {
 						CreatedOnToolsVersion = 9.4.1;
+						LastSwiftMigration = 1010;
 						TestTargetID = D274FE2B216A83C10096D02D;
 					};
 				};
@@ -577,6 +598,8 @@
 				"${BUILT_PRODUCTS_DIR}/RealmSwift/RealmSwift.framework",
 				"${BUILT_PRODUCTS_DIR}/RxCocoa/RxCocoa.framework",
 				"${BUILT_PRODUCTS_DIR}/RxSwift/RxSwift.framework",
+				"${BUILT_PRODUCTS_DIR}/SwiftDate/SwiftDate.framework",
+				"${BUILT_PRODUCTS_DIR}/UICircularProgressRing/UICircularProgressRing.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
@@ -588,6 +611,8 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RealmSwift.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxCocoa.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxSwift.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftDate.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/UICircularProgressRing.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -623,16 +648,19 @@
 				D20421672215AEA5004A22FE /* ErrorHandler.swift in Sources */,
 				D2C8B86F2198D9490029CBB6 /* EncodableExtensions.swift in Sources */,
 				D25271D4216FB4B600DDC167 /* BeaconManager.swift in Sources */,
+				D22EA68522454C02003A7B24 /* ModuleDetailsViewModel.swift in Sources */,
+				D22CADEA22453D7700A378A2 /* ModuleService.swift in Sources */,
 				D22841A122034D4800CAB864 /* SetImageViewModel.swift in Sources */,
 				D20421652215AE4E004A22FE /* AttendanceRequest.swift in Sources */,
 				D25271D6216FB85700DDC167 /* BaseAPIService.swift in Sources */,
 				D274C710224178CE00FDCFB7 /* AccountViewController.swift in Sources */,
 				D213646C224132200096B55E /* RoomService.swift in Sources */,
+				D22CADE722453D4D00A378A2 /* Module.swift in Sources */,
 				D2C8B8732198DACE0029CBB6 /* LoginViewController.swift in Sources */,
 				D274C7132241799400FDCFB7 /* AccountViewModel.swift in Sources */,
+				D22EA68322454915003A7B24 /* MoudleDetailsViewController.swift in Sources */,
 				D228419F22034D2100CAB864 /* SetImageViewController.swift in Sources */,
 				846732CE217B97C700C68C0E /* LoginRequest.swift in Sources */,
-				D274C7172241817000FDCFB7 /* TimetableViewController.swift in Sources */,
 				846732D0217B9A3F00C68C0E /* DashboardViewModel.swift in Sources */,
 				D274FE30216A83C10096D02D /* AppDelegate.swift in Sources */,
 				D20421632215AE2F004A22FE /* AttendanceService.swift in Sources */,
@@ -643,11 +671,12 @@
 				846732CC217B979E00C68C0E /* LoginService.swift in Sources */,
 				D2C8B86D2198D9290029CBB6 /* ErrorResponse.swift in Sources */,
 				D274C722224182C200FDCFB7 /* User.swift in Sources */,
-				D274C7192241818900FDCFB7 /* TimetableViewModel.swift in Sources */,
 				D228419D2203443700CAB864 /* StringExtensions.swift in Sources */,
 				D2AFD4242178E8D800B2B917 /* TokenResponse.swift in Sources */,
+				D22EA68922454DC2003A7B24 /* GetModuleResponse.swift in Sources */,
 				D21747F7217D1F81000FD7B8 /* EmptyResponse.swift in Sources */,
 				8474FE122184ADBE004023E3 /* CompareFaceResponse.swift in Sources */,
+				D22EA68722454D17003A7B24 /* Lesson.swift in Sources */,
 				D25C879821F261D10088A4F0 /* RegisterViewModel.swift in Sources */,
 				D21747F5217D1F4E000FD7B8 /* ImageRequest.swift in Sources */,
 				D21747F3217D1F2F000FD7B8 /* UserService.swift in Sources */,
@@ -761,7 +790,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -815,7 +844,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				SWIFT_COMPILATION_MODE = wholemodule;
@@ -843,7 +872,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
@@ -866,7 +895,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = me.colmlg.attendly;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
@@ -878,6 +907,7 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 37FT2A4DR2;
 				INFOPLIST_FILE = "Lecture Sign InTests/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -886,7 +916,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "me.colmlg.Lecture-Sign-InTests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Lecture Sign In.app/Lecture Sign In";
 			};
@@ -899,6 +929,7 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 37FT2A4DR2;
 				INFOPLIST_FILE = "Lecture Sign InTests/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -907,7 +938,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "me.colmlg.Lecture-Sign-InTests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Lecture Sign In.app/Lecture Sign In";
 			};
@@ -919,6 +950,7 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 37FT2A4DR2;
 				INFOPLIST_FILE = "Lecture Sign InUITests/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -927,7 +959,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "me.colmlg.Lecture-Sign-InUITests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_TARGET_NAME = "Lecture Sign In";
 			};
@@ -939,6 +971,7 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 37FT2A4DR2;
 				INFOPLIST_FILE = "Lecture Sign InUITests/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -947,7 +980,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "me.colmlg.Lecture-Sign-InUITests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_TARGET_NAME = "Lecture Sign In";
 			};

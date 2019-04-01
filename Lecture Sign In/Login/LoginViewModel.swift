@@ -16,7 +16,7 @@ class LoginViewModel {
         return users.count > 0
     }
     
-    func login(completion: @escaping () -> Void) {
+    func login(completion: @escaping (Bool) -> Void) {
         service.login(request: LoginRequest(id: username.value, password: password.value)).subscribe(onNext: { response in
             KeychainSwift().set(response.token, forKey: "Access Token")
             
@@ -24,7 +24,7 @@ class LoginViewModel {
             user.studentNumber = self.username.value
             Repository<User>().save(object: user)
             
-            completion()
+            completion(response.imageSet ?? true)
         }, onError: ErrorHandler.handleError).disposed(by: disposeBag)
     }
 }
